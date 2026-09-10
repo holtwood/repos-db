@@ -31,7 +31,7 @@ ahead/behind 数字为 2026-08-19 GitHub compare API 快照。
 | [minGPT](https://github.com/holtwood/minGPT) | [karpathy/minGPT](https://github.com/karpathy/minGPT) | 5/0 | Python | P3 | GPT 最小实现，理解 Transformer 结构用 |
 | [tutorials](https://github.com/holtwood/tutorials) | [triton-inference-server/tutorials](https://github.com/triton-inference-server/tutorials) | 7/1 | Python | P3 | Triton Inference Server 教程（注意与 Triton 语言区分） |
 | [ompi](https://github.com/holtwood/ompi) | [open-mpi/ompi](https://github.com/open-mpi/ompi) | 13/81 | C | P3 | MPI 实现，分布式通信理论参考 |
-| [Termius-Pro-zh_CN](https://github.com/holtwood/Termius-Pro-zh_CN) | [ArcSurge/Termius-Pro-zh_CN](https://github.com/ArcSurge/Termius-Pro-zh_CN) | 0/2 | Python | 无 | Termius 汉化，与 AI Infra 无关 |
+| [Termius-Pro-zh_CN](https://github.com/holtwood/Termius-Pro-zh_CN) | [ArcSurge/Termius-Pro-zh_CN](https://github.com/ArcSurge/Termius-Pro-zh_CN) | 0/6 | Python | 无 | Termius 汉化，与 AI Infra 无关 |
 | [Clay](https://github.com/holtwood/Clay) | [chaun-yi7/Clay](https://github.com/chaun-yi7/Clay) | 0/0 | CSS | 无 | Typora 主题,与 AI Infra 无关 |
 <!-- AUTO:end forks-and-translations -->
 
