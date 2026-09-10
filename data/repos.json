@@ -3,27 +3,27 @@
   "accounts": {
     "open-infra-ai": {
       "public": 7,
-      "private": 0,
+      "private": 1,
       "forks": 0,
       "note": "AI Infra 作品集"
     },
     "open-genomics": {
-      "public": 7,
+      "public": 9,
       "private": 5,
       "forks": 0,
       "note": "生物信息与 C++ 工程"
-    },
-    "vibe-knight": {
-      "public": 15,
-      "private": 1,
-      "forks": 0,
-      "note": "实验性与工具"
     },
     "holtwood": {
       "public": 33,
       "private": 1,
       "forks": 23,
       "note": "个人"
+    },
+    "build-workbench": {
+      "public": 23,
+      "private": 1,
+      "forks": 0,
+      "note": "实验性与工具"
     }
   },
   "repos": [
@@ -928,7 +928,7 @@
     },
     {
       "name": "compress-kit",
-      "account": "vibe-knight",
+      "account": "build-workbench",
       "visibility": "public",
       "property": "org-project",
       "language": "C++",
@@ -946,7 +946,7 @@
     },
     {
       "name": "cudaimg",
-      "account": "vibe-knight",
+      "account": "build-workbench",
       "visibility": "public",
       "property": "org-project",
       "language": "CUDA",

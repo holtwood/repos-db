@@ -22,7 +22,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "repos.json"
-ACCOUNTS = ["holtwood", "open-infra-ai", "open-genomics", "vibe-knight"]
+# 注：vibe-knight 已更名为 build-workbench（GitHub 对旧名做 301 重定向，
+#     但 gh repo list 不接受旧名，会报 "not recognized as either a GitHub user or an organization"）
+ACCOUNTS = ["holtwood", "open-infra-ai", "open-genomics", "build-workbench"]
 
 
 def gh(args, check=True):

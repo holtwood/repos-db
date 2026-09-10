@@ -12,8 +12,8 @@ SIMD、压缩、实时系统），在面试中作为背景与辅助证据使用�
 | [fq-compressor](https://github.com/open-genomics/fq-compressor) | C++23、oneTBB 并发流水线、CI/Sanitizer、O(1) 随机访问数据结构 | C++ 工程质量辅助项目（P0 辅助） |
 | [fastq-tools](https://github.com/open-genomics/fastq-tools) | 零拷贝 I/O、流水线设计 | 辅助 |
 | [minibwa-rust](https://github.com/open-genomics/minibwa-rust) | Rust 系统编程、算法重写 | 辅助 |
-| [compress-kit](https://github.com/vibe-knight/compress-kit) | 跨语言压缩算法与二进制级验证 | 低优先级 |
-| [cudaimg](https://github.com/vibe-knight/cudaimg) | CUDA 图像处理 | 可作 CUDA 广度证据 |
+| [compress-kit](https://github.com/build-workbench/compress-kit) | 跨语言压缩算法与二进制级验证 | 低优先级 |
+| [cudaimg](https://github.com/build-workbench/cudaimg) | CUDA 图像处理 | 可作 CUDA 广度证据 |
 <!-- AUTO:end hpc-and-transferable -->
 
 ## Fork 与已删除记录

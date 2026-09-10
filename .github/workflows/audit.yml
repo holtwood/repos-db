@@ -11,6 +11,12 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    env:
+      # audit.py 需跨账号读取仓库列表（holtwood / open-infra-ai / open-genomics /
+      # build-workbench），仓库级的 GITHUB_TOKEN 作用域仅限本仓库，权限不足，
+      # 因此使用 PAT（secret 名 AUDIT_TOKEN）。
+      # 未配置时回退到 GITHUB_TOKEN：gh 至少能启动，但跨账号查询会 WARN 并跳过。
+      GH_TOKEN: ${{ secrets.AUDIT_TOKEN || secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
