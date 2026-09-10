@@ -20,23 +20,28 @@
 | fastq-tools | open-genomics/fastq-tools |
 | micos-2024 | open-genomics/micos-2024 |
 | awesome-bioinfo-algorithms | open-genomics/awesome-bioinfo-algorithms |
-| awesome-compression | vibe-knight/awesome-compression |
+| awesome-compression | build-workbench/awesome-compression |
 
 ## 迁移后重定向失效、需改写为新地址的链接
 
 | 主页旧链接 | 实际所在 | 处理 |
 |-----------|---------|------|
 | holtwood/wiki-bioinfo | open-genomics/wiki-bioinfo | 主页改用规范地址 |
-| holtwood/compress-kit | vibe-knight/compress-kit | 同上 |
-| holtwood/bookmarks-cleaner | vibe-knight/bookmarks-cleaner | 同上 |
-| holtwood/graph-viewer | vibe-knight/graph-viewer | 同上 |
-| holtwood/meta-human | vibe-knight/meta-human | 同上 |
-| holtwood/mind-gym | vibe-knight/mind-gym | 同上 |
-| holtwood/yolo-toys | vibe-knight/yolo-toys | 同上 |
-| holtwood/webrtc | vibe-knight/webrtc-demo（信令服务器另在 webrtc-signaling） | 同上 |
+| holtwood/compress-kit | build-workbench/compress-kit | 同上 |
+| holtwood/bookmarks-cleaner | build-workbench/bookmarks-cleaner | 同上 |
+| holtwood/graph-viewer | build-workbench/graph-viewer | 同上 |
+| holtwood/meta-human | build-workbench/meta-human | 同上 |
+| holtwood/mind-gym | build-workbench/mind-gym | 同上 |
+| holtwood/yolo-toys | build-workbench/yolo-toys | 同上 |
+| holtwood/webrtc | build-workbench/webrtc-call（信令服务器另在 webrtc-signaling） | 同上 |
 
 ## 组织改名
 
-旧组织名 `aicl-lab` → 现组织名 `open-infra-ai`。旧 URL（如
-`github.com/aicl-lab/cuda-foundations`）当前靠 GitHub 301 重定向工作，
-所有文档应改用 `open-infra-ai` 规范地址。
+| 旧组织名 | 现组织名 | 说明 |
+|---------|---------|------|
+| `aicl-lab` | `open-infra-ai` | 旧 URL（如 `github.com/aicl-lab/cuda-foundations`）靠 GitHub 301 重定向工作，文档应改用规范地址 |
+| `vibe-knight` | `build-workbench` | 同上。注意：301 重定向对 `gh` CLI 无效——`gh repo list vibe-knight` 会直接报 "not recognized as either a GitHub user or an organization"，脚本与 workflow 中必须使用新名 |
+
+> **检测盲区**：仓库转移后 GitHub 会做 301 重定向，`gh api repos/<旧owner>/<repo>`
+> 仍返回 **HTTP 200**（响应体内的 `full_name` 才是真实归属）。因此仅靠 404 检测
+> 无法发现转移。`scripts/audit.py` 已按此修正为比对 `full_name`。

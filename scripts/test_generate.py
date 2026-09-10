@@ -50,7 +50,7 @@ FIXTURE = {
         {"name": "minibwa-rust", "account": "open-genomics", "visibility": "public",
          "property": "org-project", "language": "Rust", "priority": "P0",
          "categories": ["original-projects"], "notes": {}},
-        {"name": "cudaimg", "account": "vibe-knight", "visibility": "public",
+        {"name": "cudaimg", "account": "build-workbench", "visibility": "public",
          "property": "org-project", "language": "CUDA", "priority": "P2",
          "categories": ["hpc-and-transferable"]},
         {"name": "some-org-proj", "account": "open-infra-ai", "visibility": "public",

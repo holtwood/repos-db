@@ -8,7 +8,7 @@
 **最近审计日期：2026-08-30**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--09--10-4c9) ![仓库总数](https://img.shields.io/badge/仓库-61-4c9) ![公开](https://img.shields.io/badge/公开-53-blue) ![Fork](https://img.shields.io/badge/Fork-5-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--09--10-4c9) ![仓库总数](https://img.shields.io/badge/仓库-87-4c9) ![公开](https://img.shields.io/badge/公开-76-blue) ![Fork](https://img.shields.io/badge/Fork-26-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## ⭐ 主要项目精选
@@ -25,9 +25,9 @@
 | [fastq-tools](https://github.com/open-genomics/fastq-tools) | C++ | open-genomics | FASTQ 质控工具：零拷贝 I/O、TBB 流水线 |
 | [fq-compressor](https://github.com/open-genomics/fq-compressor) | C++ | open-genomics | C++23 高性能 FASTQ 压缩：3.97x 压缩比、O(1) 随机访问、oneTBB 并发流水线、CI/Sanitizer |
 | [minibwa-rust](https://github.com/open-genomics/minibwa-rust) | Rust | open-genomics | Rust 重写 BWA 序列比对核心 |
-| [JadeAI](https://github.com/holtwood/JadeAI) | TypeScript | holtwood | AI 驱动的简历与求职工作台 |
+| [JadeAI](https://github.com/build-workbench/JadeAI) | TypeScript | build-workbench | AI 驱动的简历与求职工作台 |
 | [ai-infra-interview-prep](https://github.com/holtwood/ai-infra-interview-prep) | Markdown | holtwood | 12 周 AI Infra 转行计划、能力矩阵、面试执行 |
-| [cpp-high-performance-guide](https://github.com/holtwood/cpp-high-performance-guide) | C++ | holtwood | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
+| [cpp-high-performance-guide](https://github.com/hpc-workbench/cpp-high-performance-guide) | C++ | hpc-workbench | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
 <!-- AUTO:end featured -->
 
 > 完整盘点见下方各分类与[文档站](https://holtwood.github.io/repos-db/)。
@@ -53,10 +53,12 @@
 
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
-| holtwood（个人） | 32 | 31 | 1 | 22 |
-| open-infra-ai | 7 | 7 | 0 | 0 |
-| open-genomics | 12 | 7 | 5 | 0 |
-| vibe-knight | 15 | 14 | 1 | 0 |
+| holtwood（个人） | 18 | 14 | 4 | 4 |
+| open-infra-ai | 8 | 7 | 1 | 0 |
+| open-genomics | 14 | 9 | 5 | 0 |
+| build-workbench | 24 | 23 | 1 | 1 |
+| deep-dives | 21 | 21 | 0 | 21 |
+| hpc-workbench | 2 | 2 | 0 | 0 |
 
 > 私有仓库信息不进入公开文档，仅说明"另有若干私有仓库未公开"。
 

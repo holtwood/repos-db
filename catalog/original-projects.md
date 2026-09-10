@@ -36,12 +36,14 @@
 | [awesome-bioinfo-algorithms](https://github.com/open-genomics/awesome-bioinfo-algorithms) | 算法知识库 + CLI 维护工具 | 低优先级 |
 <!-- AUTO:end original-projects-genomics -->
 
-## vibe-knight — 实验性与工具项目（P2/P3）
+## build-workbench — 实验性与工具项目（P2/P3）
+
+> 该组织原名 `vibe-knight`，已更名。
 
 贡献者审计：抽查 compress-kit contributors 仅 holtwood；组织仅一名成员。
 与 AI Infra 主线弱相关，仅在对应话题中使用：
 
-- [compress-kit](https://github.com/vibe-knight/compress-kit)（C++/Go/Rust 跨语言压缩算法与二进制验证，P2）
-- [cudaimg](https://github.com/vibe-knight/cudaimg)（CUDA 图像处理，P2）
-- [webrtc-signaling](https://github.com/vibe-knight/webrtc-signaling) / [webrtc-demo](https://github.com/vibe-knight/webrtc-demo)（Go 实时系统背景）
-- 其余（bookmarks-manager、bookmarks-cleaner、graph-viewer、mind-gym、meta-human、yolo-toys、utop、chatroom、brave-sync-notes、awesome-compression）为工具/应用实验，P3，不进入 AI Infra 简历主线。
+- [compress-kit](https://github.com/build-workbench/compress-kit)（C++/Go/Rust 跨语言压缩算法与二进制验证，P2）
+- [cudaimg](https://github.com/build-workbench/cudaimg)（CUDA 图像处理，P2）
+- [webrtc-signaling](https://github.com/build-workbench/webrtc-signaling) / [webrtc-call](https://github.com/build-workbench/webrtc-call)（Go 实时系统背景）
+- 其余（bookmarks-manager、bookmarks-cleaner、graph-viewer、mind-gym、meta-human、yolo-toys、utop、chatroom、shadow-note、awesome-compression）为工具/应用实验，P3，不进入 AI Infra 简历主线。

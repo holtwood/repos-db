@@ -11,11 +11,11 @@
 | [TensorTonic-Solutions](https://github.com/holtwood/TensorTonic-Solutions) | TensorTonic 题解 |
 | [awesome-cursorrules-zh](https://github.com/holtwood/awesome-cursorrules-zh) | Cursor 规则中文精选（AI 翻译/整理性质） |
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | 个人博客 |
-| [JadeAI](https://github.com/holtwood/JadeAI) | 求职工具 |
+| [JadeAI](https://github.com/build-workbench/JadeAI) | 求职工具 |
 | [Termius-Pro-zh_CN](https://github.com/holtwood/Termius-Pro-zh_CN) | Termius 汉化 |
 <!-- AUTO:end tools-and-unrelated -->
 
-## vibe-knight 应用与工具
+## build-workbench 应用与工具
 
 bookmarks-manager、bookmarks-cleaner、graph-viewer、mind-gym、meta-human、
 yolo-toys、utop、chatroom、brave-sync-notes、webrtc-demo、webrtc-signaling、

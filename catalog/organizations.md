@@ -33,7 +33,7 @@ fq-compressor、wiki-bioinfo、minibwa-rust、fq-compressor-rust，
 其中 fq-compressor / fastq-tools / minibwa-rust 是 C++/Rust 工程质量与
 生物信息背景的核心证据。
 
-## vibe-knight（实验性与工具项目，14 公开 + 1 私有）
+## build-workbench（实验性与工具项目，23 公开 + 1 私有）
 
 组织成员：仅 holtwood。公开仓库以工具和应用实验为主（WebRTC、书签工具、
 压缩算法、CUDA 图像处理等），详见 [original-projects.md](original-projects.md)。
