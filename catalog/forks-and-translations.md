@@ -10,27 +10,27 @@ ahead/behind 数字为 2026-08-19 GitHub compare API 快照。
 <!-- AUTO:start forks-and-translations -->
 | Fork | 上游 | ahead/behind | 主语言 | AI Infra 优先级 | 学习价值与建议阅读范围 |
 |---|---|---|---|---|---|
-| [cuda-samples](https://github.com/deep-dives/cuda-samples) | [NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples) | 26/0 | C++ | P1 | CUDA 特性官方示例；只跑 0_Introduction、2_Concepts_and_Techniques、矩阵乘法相关样例 |
+| [cuda-samples](https://github.com/deep-dives/cuda-samples) | [NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples) | 26/1 | C++ | P1 | CUDA 特性官方示例；只跑 0_Introduction、2_Concepts_and_Techniques、矩阵乘法相关样例 |
 | [SGEMM_CUDA](https://github.com/deep-dives/SGEMM_CUDA) | [siboehm/SGEMM_CUDA](https://github.com/siboehm/SGEMM_CUDA) | 2/0 | CUDA | P1 | SGEMM 优化阶梯（naive→WMMA）经典教程，已中文化 |
 | [cuda-course](https://github.com/deep-dives/cuda-course) | [Infatoshi/cuda-course](https://github.com/Infatoshi/cuda-course) | 2/0 | CUDA | P1 | CUDA 入门课程，与 cuda-samples 互补，选其一 |
 | [Triton-Puzzles](https://github.com/deep-dives/Triton-Puzzles) | [gpu-mode/Triton-Puzzles](https://github.com/gpu-mode/Triton-Puzzles) | 2/0 | Notebook | P1 | Triton 动手练习，第 4 周配合使用 |
 | [extension-cpp](https://github.com/deep-dives/extension-cpp) | [pytorch/extension-cpp](https://github.com/pytorch/extension-cpp) | 5/0 | Python | P1 | PyTorch C++ 扩展官方模板 |
 | [nano-vllm](https://github.com/deep-dives/nano-vllm) | [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) | 3/0 | Python | P1 | 极简 vLLM 复现，理解 PagedAttention 最短路径 |
 | [mini-sglang](https://github.com/deep-dives/mini-sglang) | [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | 6/0 | Python | P1 | 紧凑版 SGLang，理解 serving 主循环 |
-| [flash-attention](https://github.com/deep-dives/flash-attention) | [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | 2/3 | Python/CUDA | P2 | 只读 core 目录 FlashAttention 前向实现 |
-| [flashinfer](https://github.com/deep-dives/flashinfer) | [flashinfer-ai/flashinfer](https://github.com/flashinfer-ai/flashinfer) | 8/171 | Python/CUDA | P2 | Kernel 库，对照 triton-fused-ops 的 API 设计 |
-| [vllm](https://github.com/deep-dives/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/901 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
-| [sglang](https://github.com/deep-dives/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/1218 | Python | P2 | 只读 scheduler 与 router |
-| [TensorRT-LLM](https://github.com/deep-dives/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/671 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
-| [triton](https://github.com/deep-dives/triton) | [triton-lang/triton](https://github.com/triton-lang/triton) | 0/147 | MLIR | P2 | 只读 python/triton 语言前端与 tutorial |
-| [tvm](https://github.com/deep-dives/tvm) | [apache/tvm](https://github.com/apache/tvm) | 1/62 | Python | P3 | 仅投 ML Compiler 岗时读 tensor expression 与 TE 调度 |
-| [LightLLM](https://github.com/deep-dives/LightLLM) | [ModelTC/LightLLM](https://github.com/ModelTC/LightLLM) | 12/37 | Python | P2 | 轻量推理框架，triton kernel 实现可对照 |
-| [lectures](https://github.com/deep-dives/lectures) | [gpu-mode/lectures](https://github.com/gpu-mode/lectures) | 3/0 | Notebook | P1 | GPU MODE 讲座材料，性能分析专题 |
+| [flash-attention](https://github.com/deep-dives/flash-attention) | [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | 2/12 | Python/CUDA | P2 | 只读 core 目录 FlashAttention 前向实现 |
+| [flashinfer](https://github.com/deep-dives/flashinfer) | [flashinfer-ai/flashinfer](https://github.com/flashinfer-ai/flashinfer) | 8/295 | Python/CUDA | P2 | Kernel 库，对照 triton-fused-ops 的 API 设计 |
+| [vllm](https://github.com/deep-dives/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/1464 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
+| [sglang](https://github.com/deep-dives/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/1833 | Python | P2 | 只读 scheduler 与 router |
+| [TensorRT-LLM](https://github.com/deep-dives/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/1042 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
+| [triton](https://github.com/deep-dives/triton) | [triton-lang/triton](https://github.com/triton-lang/triton) | 0/239 | MLIR | P2 | 只读 python/triton 语言前端与 tutorial |
+| [tvm](https://github.com/deep-dives/tvm) | [apache/tvm](https://github.com/apache/tvm) | 1/111 | Python | P3 | 仅投 ML Compiler 岗时读 tensor expression 与 TE 调度 |
+| [LightLLM](https://github.com/deep-dives/LightLLM) | [ModelTC/LightLLM](https://github.com/ModelTC/LightLLM) | 12/54 | Python | P2 | 轻量推理框架，triton kernel 实现可对照 |
+| [lectures](https://github.com/deep-dives/lectures) | [gpu-mode/lectures](https://github.com/gpu-mode/lectures) | 3/1 | Notebook | P1 | GPU MODE 讲座材料，性能分析专题 |
 | [dataflowr-notebooks](https://github.com/deep-dives/dataflowr-notebooks) | [dataflowr/notebooks](https://github.com/dataflowr/notebooks) | 16/0 | Notebook | P3 | 深度学习课程笔记，按需查阅 |
 | [LLM-Workshop](https://github.com/deep-dives/LLM-Workshop) | [tylerelyt/LLM-Workshop](https://github.com/tylerelyt/LLM-Workshop) | 8/0 | Python | P3 | LLM 应用课程，与 Infra 主线弱相关 |
 | [minGPT](https://github.com/deep-dives/minGPT) | [karpathy/minGPT](https://github.com/karpathy/minGPT) | 5/0 | Python | P3 | GPT 最小实现，理解 Transformer 结构用 |
-| [tutorials](https://github.com/deep-dives/tutorials) | [triton-inference-server/tutorials](https://github.com/triton-inference-server/tutorials) | 7/1 | Python | P3 | Triton Inference Server 教程（注意与 Triton 语言区分） |
-| [ompi](https://github.com/deep-dives/ompi) | [open-mpi/ompi](https://github.com/open-mpi/ompi) | 13/81 | C | P3 | MPI 实现，分布式通信理论参考 |
+| [tutorials](https://github.com/deep-dives/tutorials) | [triton-inference-server/tutorials](https://github.com/triton-inference-server/tutorials) | 7/2 | Python | P3 | Triton Inference Server 教程（注意与 Triton 语言区分） |
+| [ompi](https://github.com/deep-dives/ompi) | [open-mpi/ompi](https://github.com/open-mpi/ompi) | 13/115 | C | P3 | MPI 实现，分布式通信理论参考 |
 | [Termius-Pro-zh_CN](https://github.com/holtwood/Termius-Pro-zh_CN) | [ArcSurge/Termius-Pro-zh_CN](https://github.com/ArcSurge/Termius-Pro-zh_CN) | 0/6 | Python | 无 | Termius 汉化，与 AI Infra 无关 |
 | [Clay](https://github.com/holtwood/Clay) | [chaun-yi7/Clay](https://github.com/chaun-yi7/Clay) | 0/0 | CSS | 无 | Typora 主题,与 AI Infra 无关 |
 <!-- AUTO:end forks-and-translations -->
