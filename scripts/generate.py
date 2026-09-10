@@ -49,12 +49,12 @@ def note(slug, key=None):
 
 
 CATEGORY_CONFIG = {
-    "lessup-owned": {
+    "holtwood-owned": {
         "title": "holtwood 个人原创",
         "headers": ["仓库", "语言", "领域", "AI Infra 相关性", "简历可用性", "说明"],
         "cols": [repo_link, lambda r: r.get("language", ""), lambda r: r.get("domain", ""),
                  lambda r: r.get("ai_relevance", ""), lambda r: r.get("resume_level", ""),
-                 note("lessup-owned")],
+                 note("holtwood-owned")],
     },
     "forks-and-translations": {
         "title": "Fork 与 AI 翻译仓库",
@@ -183,13 +183,13 @@ PRIORITY_ORDER = {"P0": 0, "P1": 1, "P2": 2, "P3": 3, "无": 4, "": 4}
 
 
 def featured_tagline(r):
-    """精选区定位文本：org-project 取 original-projects.position，original 取 lessup-owned notes。"""
+    """精选区定位文本：org-project 取 original-projects.position，original 取 holtwood-owned notes。"""
     if r.get("property") == "org-project":
         v = r.get("notes", {}).get("original-projects", "")
         if isinstance(v, dict):
             return v.get("position", "")
         return v if isinstance(v, str) else ""
-    v = r.get("notes", {}).get("lessup-owned", "")
+    v = r.get("notes", {}).get("holtwood-owned", "")
     return v if isinstance(v, str) else ""
 
 
@@ -244,7 +244,7 @@ def readme_sections(data):
 
 # sidebar 显示标题与各文件 H1 一致
 SIDEBAR_TITLES = {
-    "lessup-owned": "holtwood 个人原创（非 Fork）公开仓库",
+    "holtwood-owned": "holtwood 个人原创（非 Fork）公开仓库",
     "forks-and-translations": "Fork 与 AI 翻译仓库",
     "organizations": "组织仓库概览与贡献审计",
     "original-projects": "组织下的原创项目（含贡献者审计）",
@@ -257,7 +257,7 @@ SIDEBAR_TITLES = {
 
 def render_sidebar(data):
     lines = ["- [🏠 首页](README.md)", "", "- **catalog**"]
-    for slug in ["lessup-owned", "forks-and-translations", "organizations",
+    for slug in ["holtwood-owned", "forks-and-translations", "organizations",
                  "original-projects", "ai-infra", "hpc-and-transferable",
                  "tools-and-unrelated", "retired-and-migrated"]:
         lines.append(f"  - [{SIDEBAR_TITLES[slug]}](catalog/{slug}.md)")

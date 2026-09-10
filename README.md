@@ -38,7 +38,7 @@
 
 完整盘点按分类：
 
-- [holtwood 个人原创（非 Fork）公开仓库](catalog/lessup-owned.md)
+- [holtwood 个人原创（非 Fork）公开仓库](catalog/holtwood-owned.md)
 - [Fork 与 AI 翻译仓库](catalog/forks-and-translations.md)
 - [组织仓库概览与贡献审计](catalog/organizations.md)
 - [组织下的原创项目（含贡献者审计）](catalog/original-projects.md)
@@ -64,7 +64,7 @@
 
 ```
 catalog/
-  lessup-owned.md           # holtwood 个人原创（非 Fork）公开仓库
+  holtwood-owned.md         # holtwood 个人原创（非 Fork）公开仓库
   forks-and-translations.md # 22 个 Fork：上游、ahead/behind、中文注释范围
   organizations.md          # 三个组织概览与贡献审计结论
   original-projects.md      # 组织下的原创项目（含贡献者审计）
@@ -79,7 +79,7 @@ CHANGELOG.md
 
 ## 快速导航
 
-- 想看**我自己的项目**（简历可用）→ [catalog/original-projects.md](catalog/original-projects.md)、[catalog/lessup-owned.md](catalog/lessup-owned.md)
+- 想看**我自己的项目**（简历可用）→ [catalog/original-projects.md](catalog/original-projects.md)、[catalog/holtwood-owned.md](catalog/holtwood-owned.md)
 - 想了解**某个 Fork 的架构与学习路径** → [deep-dives/](deep-dives/)
 - 想按**学习优先级**排阅读顺序 → [catalog/ai-infra.md](catalog/ai-infra.md)
 - 查**失效/迁移链接** → [catalog/retired-and-migrated.md](catalog/retired-and-migrated.md)

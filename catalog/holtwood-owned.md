@@ -2,7 +2,7 @@
 
 审计日期：2026-08-19。共 9 个公开原创仓库（另有 1 个私有仓库不在此列）。
 
-<!-- AUTO:start lessup-owned -->
+<!-- AUTO:start holtwood-owned -->
 | 仓库 | 语言 | 领域 | AI Infra 相关性 | 简历可用性 | 说明 |
 |---|---|---|---|---|---|
 | [ai-infra-interview-prep](https://github.com/holtwood/ai-infra-interview-prep) | Markdown | 求职规划 | 高 | 中 | 12 周 AI Infra 转行计划、能力矩阵、面试执行 |
@@ -15,6 +15,6 @@
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | CSS | 博客 | 无 | 低 | 个人博客站点 |
 | [LessUp](https://github.com/holtwood/LessUp) | Markdown | 个人主页 | 低 | 中 | Profile 展示页 |
 | [JadeAI](https://github.com/holtwood/JadeAI) | TypeScript | 求职工具 | 高 | 中 | AI 驱动的简历与求职工作台 |
-<!-- AUTO:end lessup-owned -->
+<!-- AUTO:end holtwood-owned -->
 
 另有 1 个私有仓库，信息不进入公开文档。
