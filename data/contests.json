@@ -1,0 +1,136 @@
+{
+  "updated_at": "2026-10-16",
+  "scope": "只收录公开可访问的信息（比赛名、公开题目页、problem_id、难度）。解题仓库为私有仓库，其名称、路径与内容不进入本仓库（见 methodology.md）。",
+  "platforms": {
+    "cannjudge": {
+      "name": "CANNJudge 昇腾算子判题平台",
+      "url": "https://cannjudge.cn"
+    },
+    "cann-challenge": {
+      "name": "CANN 挑战赛",
+      "url": ""
+    }
+  },
+  "contests": [
+    {
+      "key": "cannjudge-2026_electronic",
+      "platform": "cannjudge",
+      "title": "昇腾AI行业创新大赛——2026电力行业算子专场",
+      "contest_id": "6aa3bb4f2d3dd2c5aeab7eef",
+      "period": "2026-09-20 ~ 2026-11-06",
+      "page": "https://cannjudge.cn/public/2026_electronic",
+      "status": "进行中",
+      "env": "CANN 9.0.0 · Ascend 910B",
+      "problems": [
+        {
+          "seq": "01",
+          "title": "安全带判定融合算子 SafetyBeltViolationGeometry",
+          "problem_id": "6ab0fd36b0477ec41e33e401",
+          "difficulty": 2,
+          "page": "https://cannjudge.cn/public/2026_electronic/safetybeltviolationgeometry"
+        },
+        {
+          "seq": "02",
+          "title": "潮流计算算子 pinv",
+          "problem_id": "6ab10035b0477ec41e358e1a",
+          "difficulty": 4,
+          "page": "https://cannjudge.cn/public/2026_electronic/pinv"
+        },
+        {
+          "seq": "03",
+          "title": "潮流信息聚合算子 SplineConv",
+          "problem_id": "6ab0fdcab0477ec41e342fc6",
+          "difficulty": 4,
+          "page": "https://cannjudge.cn/public/2026_electronic/splineconv"
+        },
+        {
+          "seq": "04",
+          "title": "电力系统线性化分析算子 det",
+          "problem_id": "6ab0fe98b0477ec41e34a06e",
+          "difficulty": 4,
+          "page": "https://cannjudge.cn/public/2026_electronic/det"
+        },
+        {
+          "seq": "05",
+          "title": "电力巡检算子 SwiGLU",
+          "problem_id": "6ab0f890b0477ec41e3146a7",
+          "difficulty": 2,
+          "page": "https://cannjudge.cn/public/2026_electronic/swiglu"
+        },
+        {
+          "seq": "06",
+          "title": "多工况潮流数据分析算子 lstsq",
+          "problem_id": "6ab0ff69b0477ec41e3515bc",
+          "difficulty": null,
+          "page": "https://cannjudge.cn/public/2026_electronic/lstsq"
+        },
+        {
+          "seq": "07",
+          "title": "目标候选框解码与置信度融合 FireCandidateDecodeFusion",
+          "problem_id": "6ab0fb08b0477ec41e32a670",
+          "difficulty": 2,
+          "page": "https://cannjudge.cn/public/2026_electronic/firecandidatedecodefusion"
+        },
+        {
+          "seq": "08",
+          "title": "实对称矩阵谱分解算子 eigh",
+          "problem_id": "6ab0ff0ab0477ec41e34ea53",
+          "difficulty": 4,
+          "page": "https://cannjudge.cn/public/2026_electronic/eigh"
+        },
+        {
+          "seq": "09",
+          "title": "线性修正方程求解算子 solve",
+          "problem_id": "6ab10091b0477ec41e35b5cc",
+          "difficulty": 4,
+          "page": "https://cannjudge.cn/public/2026_electronic/solve"
+        },
+        {
+          "seq": "10",
+          "title": "最小安全距离计算算子 TreeLineMinDistance",
+          "problem_id": "6ab0f969b0477ec41e31c112",
+          "difficulty": 4,
+          "page": "https://cannjudge.cn/public/2026_electronic/treelinemindistance"
+        }
+      ]
+    },
+    {
+      "key": "cannjudge-2026-10-ladder",
+      "platform": "cannjudge",
+      "title": "CANNJudge 2026 十月天梯赛",
+      "contest_id": null,
+      "period": "2026-10",
+      "page": null,
+      "status": "进行中",
+      "env": "CANN 9.0.0 · Ascend 910B",
+      "problems": [
+        {
+          "seq": "01",
+          "title": "转置卷积算子 ConvTranspose2D",
+          "problem_id": null,
+          "difficulty": null,
+          "page": null
+        }
+      ]
+    },
+    {
+      "key": "cann-challenge-2026-northwest",
+      "platform": "cann-challenge",
+      "title": "2026 CANN 挑战赛西北赛区初赛",
+      "contest_id": null,
+      "period": "2026",
+      "page": null,
+      "status": "进行中",
+      "env": "CANN 9.0.0 · Ascend 910B",
+      "problems": [
+        {
+          "seq": "01",
+          "title": "SqrtSoftplusTopK",
+          "problem_id": null,
+          "difficulty": null,
+          "page": null
+        }
+      ]
+    }
+  ]
+}

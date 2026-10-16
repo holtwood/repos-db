@@ -1,6 +1,7 @@
 - [🏠 首页](README.md)
 
 - **catalog**
+  - [竞赛与赛题](catalog/competitions.md)
   - [holtwood 个人原创（非 Fork）公开仓库](catalog/holtwood-owned.md)
   - [Fork 与 AI 翻译仓库](catalog/forks-and-translations.md)
   - [组织仓库概览与贡献审计](catalog/organizations.md)

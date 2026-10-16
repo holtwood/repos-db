@@ -17,6 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "repos.json"
+CONTESTS_JSON = ROOT / "data" / "contests.json"
 CATALOG = ROOT / "catalog"
 README = ROOT / "README.md"
 SIDEBAR = ROOT / "_sidebar.md"
@@ -24,6 +25,11 @@ CHANGELOG = ROOT / "CHANGELOG.md"
 
 PLACEHOLDER_RE = re.compile(
     r"<!-- AUTO:start (\S+) -->.*?<!-- AUTO:end \1 -->", re.DOTALL)
+
+
+def load_contests():
+    with open(CONTESTS_JSON, encoding="utf-8") as f:
+        return json.load(f)
 
 
 def repo_link(r):
@@ -149,6 +155,69 @@ def replace_placeholders(path, slug, table):
     return replace_in_text(Path(path).read_text(encoding="utf-8"), slug, table)
 
 
+# --- 竞赛与赛题（data/contests.json） ---
+# 只渲染公开可访问的信息；解题仓库为私有仓库，其名称与路径不进入本仓库输出。
+COMPETITIONS_FILE = "competitions.md"
+
+
+def dash(v):
+    """表格单元格取值：空值渲染为 '-'，非字符串（如 difficulty 整数）转字符串。"""
+    return "-" if v in (None, "") else str(v)
+
+
+def render_contest_meta(contests, contest):
+    platform = contests["platforms"].get(contest["platform"], {})
+    if platform.get("url"):
+        plat = f"[{platform['name']}]({platform['url']})"
+    else:
+        plat = platform.get("name", contest["platform"])
+    pairs = [
+        ("平台", plat),
+        ("赛期", dash(contest.get("period"))),
+        ("状态", dash(contest.get("status"))),
+        ("评测环境", dash(contest.get("env"))),
+        ("题面页", f"[{contest['page']}]({contest['page']})" if contest.get("page") else "-"),
+    ]
+    return "\n".join(["| 项 | 值 |", "|---|---|"] +
+                     [f"| {k} | {v} |" for k, v in pairs])
+
+
+def render_contest_problems(contest):
+    header = "| 题号 | 题目 | problem_id | 难度 |"
+    sep = "|---|---|---|---|"
+    rows = []
+    for p in contest["problems"]:
+        title = f"[{p['title']}]({p['page']})" if p.get("page") else p["title"]
+        pid = f"`{p['problem_id']}`" if p.get("problem_id") else "-"
+        rows.append("| " + " | ".join([
+            dash(p.get("seq")), title, pid, dash(p.get("difficulty"))]) + " |")
+    return "\n".join([header, sep] + rows)
+
+
+def render_contest_section(contests, contest):
+    return render_contest_meta(contests, contest) + "\n\n" + render_contest_problems(contest)
+
+
+def render_contest_overview(contests):
+    """README 里的比赛概览表。"""
+    header = "| 比赛 | 平台 | 赛期 | 题数 | 状态 | 题面页 |"
+    sep = "|---|---|---|---|---|---|"
+    rows = []
+    for c in contests["contests"]:
+        platform = contests["platforms"].get(c["platform"], {}).get("name", c["platform"])
+        page = f"[题目列表]({c['page']})" if c.get("page") else "-"
+        rows.append("| " + " | ".join([
+            c["title"], platform, dash(c.get("period")), str(len(c["problems"])),
+            dash(c.get("status")), page]) + " |")
+    return "\n".join([header, sep] + rows)
+
+
+def competitions_blocks(contests):
+    """catalog/competitions.md 的 (slug, 内容) 列表，每场比赛一个占位符块。"""
+    return [(f"contest-{c['key']}", render_contest_section(contests, c))
+            for c in contests["contests"]]
+
+
 def render_accounts_table(data):
     header = "| 账号 | 可见仓库 | 公开 | 私有 | Fork |"
     sep = "|------|---------|------|------|------|"
@@ -159,17 +228,21 @@ def render_accounts_table(data):
     return "\n".join([header, sep] + rows)
 
 
-def render_badges(data):
+def render_badges(data, contests):
     accts = data["accounts"]
     total = sum(a["public"] + a["private"] for a in accts.values())
     pub = sum(a["public"] for a in accts.values())
     forks = sum(a["forks"] for a in accts.values())
     audited = data["audited_at"].replace("-", "--")  # shields.io 日期连字符需转义
+    n_contests = len(contests["contests"])
+    n_problems = sum(len(c["problems"]) for c in contests["contests"])
     badges = [
         f"![审计日期](https://img.shields.io/badge/审计-{audited}-4c9)",
         f"![仓库总数](https://img.shields.io/badge/仓库-{total}-4c9)",
         f"![公开](https://img.shields.io/badge/公开-{pub}-blue)",
         f"![Fork](https://img.shields.io/badge/Fork-{forks}-orange)",
+        f"![竞赛](https://img.shields.io/badge/竞赛-{n_contests}-blue)",
+        f"![赛题](https://img.shields.io/badge/赛题-{n_problems}-orange)",
         "![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)",
     ]
     return " ".join(badges)
@@ -235,15 +308,17 @@ def render_featured(data):
     return render_table(repos, FEATURED_CONFIG)
 
 
-def readme_sections(data):
+def readme_sections(data, contests):
     """README 占位符 slug -> 表格，供 main()/check() 共用，避免两条路径发散。"""
     return [("featured", render_featured(data)),
             ("accounts", render_accounts_table(data)),
-            ("badges", render_badges(data))]
+            ("badges", render_badges(data, contests)),
+            ("competitions-index", render_contest_overview(contests))]
 
 
 # sidebar 显示标题与各文件 H1 一致
 SIDEBAR_TITLES = {
+    "competitions": "竞赛与赛题",
     "holtwood-owned": "holtwood 个人原创（非 Fork）公开仓库",
     "forks-and-translations": "Fork 与 AI 翻译仓库",
     "organizations": "组织仓库概览与贡献审计",
@@ -257,9 +332,10 @@ SIDEBAR_TITLES = {
 
 def render_sidebar(data):
     lines = ["- [🏠 首页](README.md)", "", "- **catalog**"]
-    for slug in ["holtwood-owned", "forks-and-translations", "organizations",
-                 "original-projects", "ai-infra", "hpc-and-transferable",
-                 "tools-and-unrelated", "retired-and-migrated"]:
+    for slug in ["competitions", "holtwood-owned", "forks-and-translations",
+                 "organizations", "original-projects", "ai-infra",
+                 "hpc-and-transferable", "tools-and-unrelated",
+                 "retired-and-migrated"]:
         lines.append(f"  - [{SIDEBAR_TITLES[slug]}](catalog/{slug}.md)")
     lines += ["", "- **deep-dives**"]
     for p in sorted((CATALOG.parent / "deep-dives").glob("*.md")):
@@ -294,6 +370,7 @@ def catalog_slugs_by_file():
 def check(root=ROOT):
     """渲染到内存并与磁盘比对；返回差异文件列表（无差异为 []）。"""
     data = load_data()
+    contests = load_contests()
     diffs = []
 
     for fn, slugs in catalog_slugs_by_file().items():
@@ -307,10 +384,18 @@ def check(root=ROOT):
         if text != f.read_text(encoding="utf-8"):
             diffs.append(str(f))
 
+    comp_path = root / "catalog" / COMPETITIONS_FILE
+    if comp_path.exists():
+        text = comp_path.read_text(encoding="utf-8")
+        for slug, block in competitions_blocks(contests):
+            text = replace_in_text(text, slug, block)
+        if text != comp_path.read_text(encoding="utf-8"):
+            diffs.append(str(comp_path))
+
     readme_path = root / "README.md"
     if readme_path.exists():
         text = readme_path.read_text(encoding="utf-8")
-        for slug, table in readme_sections(data):
+        for slug, table in readme_sections(data, contests):
             if f"<!-- AUTO:start {slug} -->" in text:
                 text = replace_in_text(text, slug, table)
         if text != readme_path.read_text(encoding="utf-8"):
@@ -330,6 +415,7 @@ def main():
     args = ap.parse_args()
 
     data = load_data()
+    contests = load_contests()
 
     if args.check:
         diffs = check()
@@ -354,9 +440,18 @@ def main():
         f.write_text(text, encoding="utf-8")
         print(f"rendered: {f.name} ({total} rows)")
 
-    # README：精选区 + 概览表 + 徽章（内存连续替换）
+    # 竞赛与赛题（catalog/competitions.md，每场比赛一个占位符块）
+    comp = CATALOG / COMPETITIONS_FILE
+    if comp.exists():
+        text = comp.read_text(encoding="utf-8")
+        for slug, block in competitions_blocks(contests):
+            text = replace_in_text(text, slug, block)
+        comp.write_text(text, encoding="utf-8")
+        print(f"rendered: catalog/{COMPETITIONS_FILE}")
+
+    # README：精选区 + 概览表 + 徽章 + 竞赛概览（内存连续替换）
     readme = README.read_text(encoding="utf-8")
-    for slug, table in readme_sections(data):
+    for slug, table in readme_sections(data, contests):
         if f"<!-- AUTO:start {slug} -->" in readme:
             readme = replace_in_text(readme, slug, table)
     README.write_text(readme, encoding="utf-8")
