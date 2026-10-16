@@ -4,6 +4,11 @@
 
 ## [Unreleased] — 2026-08-19
 
+### Added
+- 新增 `data/contests.json` + `catalog/competitions.md`：竞赛与赛题索引（比赛信息、
+  公开题目页、`problem_id`、难度）。README 增加"竞赛与赛题"区块与徽章，侧边栏增加条目。
+  只收录公开可访问信息，私有解题仓库名称与路径不进入本仓库。
+
 ### Changed
 - 数据快照更新（2026-09-10）：ahead/behind 与链接状态已刷新
 - 账号迁移:LessUp → holtwood(repos-db);README 主页化 + GitHub Pages 部署

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """generate.py 的单元测试：占位符替换、缺失占位符、跨分类 notes、确定性、私有约束。"""
 import importlib.util
+import json
 import sys
 import tempfile
 from pathlib import Path
@@ -166,6 +167,39 @@ with tempfile.TemporaryDirectory() as td:
 # T-F. 无私有分支：精选区入选仓库均为 public
 check("精选区无私有仓库",
       all(REPO_BY_NAME[n].get("visibility") == "public" for n in names_in_feat))
+
+# --- 竞赛与赛题（render_contest_* / competitions_blocks） ---
+CONTESTS_FIXTURE = {
+    "platforms": {"cannjudge": {"name": "CANNJudge", "url": "https://cannjudge.cn"}},
+    "contests": [{
+        "key": "demo", "platform": "cannjudge", "title": "演示赛",
+        "period": "2026", "page": "https://cannjudge.cn/public/demo",
+        "status": "进行中", "env": "CANN 9.0.0",
+        "problems": [{"seq": "01", "title": "题目一", "problem_id": "abc",
+                      "difficulty": 4, "page": "https://cannjudge.cn/public/demo/p1"}],
+    }],
+}
+
+# T-G. 比赛区块 slug 与比赛 key 一一对应
+blocks = generate.competitions_blocks(CONTESTS_FIXTURE)
+check("竞赛块 slug 对应", [s for s, _ in blocks] == ["contest-demo"], str(blocks)[:80])
+
+# T-H. 题目表含 problem_id 与难度；不出现任何 GitHub 仓库链接（私有约束）
+table = generate.render_contest_problems(CONTESTS_FIXTURE["contests"][0])
+check("题目表含 problem_id 与难度", "`abc`" in table and "| 4 |" in table, table)
+check("题目表无仓库链接", "github.com" not in table, table)
+
+# T-I. 真实数据守卫：contests.json 不含私有仓库/本地路径信息
+_real = json.loads((Path(__file__).parent.parent / "data" / "contests.json")
+                   .read_text(encoding="utf-8"))
+_txt = json.dumps(_real, ensure_ascii=False)
+_leaks = [k for k in ["holtwood/", "/data/", "local_path", "workspace"] if k in _txt]
+check("contests.json 无私有信息", not _leaks, str(_leaks))
+
+# T-J. 真实数据可渲染且不含仓库链接
+_ov = generate.render_contest_overview(_real)
+check("竞赛概览含比赛表头", "| 比赛 | 平台 |" in _ov, _ov[:60])
+check("竞赛概览无仓库链接", "github.com" not in _ov, _ov[:200])
 
 if FAILURES:
     print("\n".join(FAILURES), file=sys.stderr)

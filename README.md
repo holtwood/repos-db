@@ -8,7 +8,7 @@
 **最近审计日期：2026-08-30**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--09--10-4c9) ![仓库总数](https://img.shields.io/badge/仓库-87-4c9) ![公开](https://img.shields.io/badge/公开-76-blue) ![Fork](https://img.shields.io/badge/Fork-26-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--09--10-4c9) ![仓库总数](https://img.shields.io/badge/仓库-87-4c9) ![公开](https://img.shields.io/badge/公开-76-blue) ![Fork](https://img.shields.io/badge/Fork-26-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## ⭐ 主要项目精选
@@ -32,12 +32,28 @@
 
 > 完整盘点见下方各分类与[文档站](https://holtwood.github.io/repos-db/)。
 
+## 🏁 竞赛与赛题
+
+算子竞赛参赛记录（CANNJudge 与 CANN 挑战赛）。只收录**公开可访问**的信息：比赛名、
+公开题目页、`problem_id`、难度、评测环境；解题仓库为私有仓库，其名称与路径不进入本仓库。
+
+<!-- AUTO:start competitions-index -->
+| 比赛 | 平台 | 赛期 | 题数 | 状态 | 题面页 |
+|---|---|---|---|---|---|
+| 昇腾AI行业创新大赛——2026电力行业算子专场 | CANNJudge 昇腾算子判题平台 | 2026-09-20 ~ 2026-11-06 | 10 | 进行中 | [题目列表](https://cannjudge.cn/public/2026_electronic) |
+| CANNJudge 2026 十月天梯赛 | CANNJudge 昇腾算子判题平台 | 2026-10 | 1 | 进行中 | - |
+| 2026 CANN 挑战赛西北赛区初赛 | CANN 挑战赛 | 2026 | 1 | 进行中 | - |
+<!-- AUTO:end competitions-index -->
+
+逐题明细见 **[catalog/competitions.md](catalog/competitions.md)**。
+
 ## 📖 文档站与完整盘点
 
 可搜索文档站（GitHub Pages）：**https://holtwood.github.io/repos-db/**（docsify 静态站，支持全文搜索与侧边栏导航）
 
 完整盘点按分类：
 
+- [竞赛与赛题](catalog/competitions.md)（公开信息）
 - [holtwood 个人原创（非 Fork）公开仓库](catalog/holtwood-owned.md)
 - [Fork 与 AI 翻译仓库](catalog/forks-and-translations.md)
 - [组织仓库概览与贡献审计](catalog/organizations.md)
@@ -66,6 +82,7 @@
 
 ```
 catalog/
+  competitions.md           # 竞赛与赛题（仅公开信息）
   holtwood-owned.md         # holtwood 个人原创（非 Fork）公开仓库
   forks-and-translations.md # 22 个 Fork：上游、ahead/behind、中文注释范围
   organizations.md          # 三个组织概览与贡献审计结论
@@ -84,6 +101,7 @@ CHANGELOG.md
 - 想看**我自己的项目**（简历可用）→ [catalog/original-projects.md](catalog/original-projects.md)、[catalog/holtwood-owned.md](catalog/holtwood-owned.md)
 - 想了解**某个 Fork 的架构与学习路径** → [deep-dives/](deep-dives/)
 - 想按**学习优先级**排阅读顺序 → [catalog/ai-infra.md](catalog/ai-infra.md)
+- 想看**参加过哪些算子竞赛、有哪些赛题** → [catalog/competitions.md](catalog/competitions.md)
 - 查**失效/迁移链接** → [catalog/retired-and-migrated.md](catalog/retired-and-migrated.md)
 
 ## 职责边界
