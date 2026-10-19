@@ -19,9 +19,9 @@ ahead/behind 数字为 2026-08-19 GitHub compare API 快照。
 | [mini-sglang](https://github.com/holtwood-forks/mini-sglang) | [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | 6/0 | Python | P1 | 紧凑版 SGLang，理解 serving 主循环 |
 | [flash-attention](https://github.com/holtwood-forks/flash-attention) | [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | 2/58 | Python/CUDA | P2 | 只读 core 目录 FlashAttention 前向实现 |
 | [flashinfer](https://github.com/holtwood-forks/flashinfer) | [flashinfer-ai/flashinfer](https://github.com/flashinfer-ai/flashinfer) | 8/1180 | Python/CUDA | P2 | Kernel 库，对照 triton-fused-ops 的 API 设计 |
-| [vllm](https://github.com/holtwood-forks/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/3694 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
-| [sglang](https://github.com/holtwood-forks/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/4166 | Python | P2 | 只读 scheduler 与 router |
-| [TensorRT-LLM](https://github.com/holtwood-forks/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/1904 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
+| [vllm](https://github.com/holtwood-forks/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/3698 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
+| [sglang](https://github.com/holtwood-forks/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/4167 | Python | P2 | 只读 scheduler 与 router |
+| [TensorRT-LLM](https://github.com/holtwood-forks/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/1906 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
 | [triton](https://github.com/holtwood-forks/triton) | [triton-lang/triton](https://github.com/triton-lang/triton) | 0/562 | MLIR | P2 | 只读 python/triton 语言前端与 tutorial |
 | [tvm](https://github.com/holtwood-forks/tvm) | [apache/tvm](https://github.com/apache/tvm) | 1/412 | Python | P3 | 仅投 ML Compiler 岗时读 tensor expression 与 TE 调度 |
 | [LightLLM](https://github.com/holtwood-forks/LightLLM) | [ModelTC/LightLLM](https://github.com/ModelTC/LightLLM) | 12/88 | Python | P2 | 轻量推理框架，triton kernel 实现可对照 |
