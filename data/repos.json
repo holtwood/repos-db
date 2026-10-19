@@ -1,47 +1,47 @@
 {
-  "audited_at": "2026-09-10",
+  "audited_at": "2026-10-19",
   "accounts": {
     "holtwood": {
-      "public": 14,
-      "private": 4,
-      "forks": 4,
+      "public": 9,
+      "private": 10,
+      "forks": 0,
       "note": "个人"
     },
     "open-infra-ai": {
-      "public": 7,
-      "private": 1,
+      "public": 9,
+      "private": 2,
       "forks": 0,
       "note": "AI Infra 作品集"
     },
     "open-genomics": {
       "public": 9,
-      "private": 5,
+      "private": 4,
       "forks": 0,
       "note": "生物信息与 C++ 工程"
     },
-    "build-workbench": {
-      "public": 23,
+    "holtwood-projects": {
+      "public": 25,
       "private": 1,
       "forks": 1,
-      "note": "实验性与工具"
+      "note": "完整可运行的项目与工具"
     },
-    "deep-dives": {
-      "public": 21,
+    "holtwood-forks": {
+      "public": 31,
       "private": 0,
-      "forks": 21,
-      "note": ""
+      "forks": 30,
+      "note": "上游研读副本与自用 fork"
     },
-    "hpc-workbench": {
-      "public": 2,
-      "private": 0,
+    "cannjudge": {
+      "public": 1,
+      "private": 17,
       "forks": 0,
-      "note": ""
+      "note": "Ascend C 赛事归档"
     }
   },
   "repos": [
     {
       "name": "ai-infra-interview-prep",
-      "account": "holtwood",
+      "account": "open-infra-ai",
       "visibility": "public",
       "property": "original",
       "language": "Markdown",
@@ -94,7 +94,7 @@
     },
     {
       "name": "cpp-high-performance-guide",
-      "account": "hpc-workbench",
+      "account": "open-infra-ai",
       "visibility": "public",
       "property": "original",
       "language": "C++",
@@ -116,7 +116,7 @@
     },
     {
       "name": "bitcal",
-      "account": "hpc-workbench",
+      "account": "holtwood-projects",
       "visibility": "public",
       "property": "original",
       "language": "C++",
@@ -137,7 +137,7 @@
       "links_ok": true
     },
     {
-      "name": "TensorTonic-Solutions",
+      "name": "tensortonic-solutions",
       "account": "holtwood",
       "visibility": "public",
       "property": "original",
@@ -194,7 +194,7 @@
       "links_ok": true
     },
     {
-      "name": "LessUp",
+      "name": "holtwood",
       "account": "holtwood",
       "visibility": "public",
       "property": "original",
@@ -212,7 +212,7 @@
     },
     {
       "name": "JadeAI",
-      "account": "build-workbench",
+      "account": "holtwood-projects",
       "visibility": "public",
       "property": "original",
       "language": "TypeScript",
@@ -231,12 +231,12 @@
     },
     {
       "name": "cuda-samples",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "NVIDIA/cuda-samples",
       "ahead": 26,
-      "behind": 0,
+      "behind": 1,
       "language": "C++",
       "priority": "P1",
       "categories": [
@@ -249,7 +249,7 @@
     },
     {
       "name": "SGEMM_CUDA",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "siboehm/SGEMM_CUDA",
@@ -267,7 +267,7 @@
     },
     {
       "name": "cuda-course",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "Infatoshi/cuda-course",
@@ -285,7 +285,7 @@
     },
     {
       "name": "Triton-Puzzles",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "gpu-mode/Triton-Puzzles",
@@ -303,12 +303,12 @@
     },
     {
       "name": "extension-cpp",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "pytorch/extension-cpp",
       "ahead": 5,
-      "behind": 0,
+      "behind": 1,
       "language": "Python",
       "priority": "P1",
       "categories": [
@@ -321,7 +321,7 @@
     },
     {
       "name": "nano-vllm",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "GeeeekExplorer/nano-vllm",
@@ -339,7 +339,7 @@
     },
     {
       "name": "mini-sglang",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "sgl-project/mini-sglang",
@@ -357,12 +357,12 @@
     },
     {
       "name": "flash-attention",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "Dao-AILab/flash-attention",
       "ahead": 2,
-      "behind": 3,
+      "behind": 58,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -375,12 +375,12 @@
     },
     {
       "name": "flashinfer",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 171,
+      "behind": 1180,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -393,12 +393,12 @@
     },
     {
       "name": "vllm",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 901,
+      "behind": 3694,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -411,12 +411,12 @@
     },
     {
       "name": "sglang",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 1218,
+      "behind": 4166,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -429,12 +429,12 @@
     },
     {
       "name": "TensorRT-LLM",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 671,
+      "behind": 1904,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -447,12 +447,12 @@
     },
     {
       "name": "triton",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "triton-lang/triton",
       "ahead": 0,
-      "behind": 147,
+      "behind": 562,
       "language": "MLIR",
       "priority": "P2",
       "categories": [
@@ -465,12 +465,12 @@
     },
     {
       "name": "tvm",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "apache/tvm",
       "ahead": 1,
-      "behind": 62,
+      "behind": 412,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -483,12 +483,12 @@
     },
     {
       "name": "LightLLM",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "ModelTC/LightLLM",
       "ahead": 12,
-      "behind": 37,
+      "behind": 88,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -501,12 +501,12 @@
     },
     {
       "name": "lectures",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "gpu-mode/lectures",
       "ahead": 3,
-      "behind": 0,
+      "behind": 1,
       "language": "Notebook",
       "priority": "P1",
       "categories": [
@@ -519,7 +519,7 @@
     },
     {
       "name": "dataflowr-notebooks",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "dataflowr/notebooks",
@@ -537,7 +537,7 @@
     },
     {
       "name": "LLM-Workshop",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "tylerelyt/LLM-Workshop",
@@ -555,7 +555,7 @@
     },
     {
       "name": "minGPT",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "karpathy/minGPT",
@@ -573,12 +573,12 @@
     },
     {
       "name": "tutorials",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "triton-inference-server/tutorials",
       "ahead": 7,
-      "behind": 1,
+      "behind": 8,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -591,12 +591,12 @@
     },
     {
       "name": "ompi",
-      "account": "deep-dives",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "open-mpi/ompi",
       "ahead": 13,
-      "behind": 81,
+      "behind": 361,
       "language": "C",
       "priority": "P3",
       "categories": [
@@ -614,12 +614,12 @@
     },
     {
       "name": "Termius-Pro-zh_CN",
-      "account": "holtwood",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "ArcSurge/Termius-Pro-zh_CN",
-      "ahead": 0,
-      "behind": 6,
+      "ahead": 10,
+      "behind": 0,
       "language": "Python",
       "priority": "无",
       "categories": [
@@ -627,14 +627,14 @@
         "tools-and-unrelated"
       ],
       "notes": {
-        "forks-and-translations": "Termius 汉化，与 AI Infra 无关",
+        "forks-and-translations": "Termius 汉化中文包；自用 fork，与 AI Infra 无关",
         "tools-and-unrelated": "Termius 汉化"
       },
       "links_ok": true
     },
     {
       "name": "Clay",
-      "account": "holtwood",
+      "account": "holtwood-forks",
       "visibility": "public",
       "property": "fork",
       "upstream": "chaun-yi7/Clay",
@@ -644,14 +644,14 @@
         "forks-and-translations"
       ],
       "notes": {
-        "forks-and-translations": "Typora 主题,与 AI Infra 无关"
+        "forks-and-translations": "Typora 主题（仿 Claude 配色）；自用 fork，与 AI Infra 无关"
       },
       "links_ok": true,
       "ahead": 0,
-      "behind": 0
+      "behind": 2
     },
     {
-      "name": "aicl-lab",
+      "name": "open-infra-ai",
       "account": "open-infra-ai",
       "visibility": "public",
       "property": "org-project",
@@ -695,7 +695,7 @@
       "links_ok": true
     },
     {
-      "name": "triton-fused-ops",
+      "name": "trifuse",
       "account": "open-infra-ai",
       "visibility": "public",
       "property": "org-project",
@@ -717,7 +717,7 @@
       "links_ok": true
     },
     {
-      "name": "cuflash-attn",
+      "name": "cuflash",
       "account": "open-infra-ai",
       "visibility": "public",
       "property": "org-project",
@@ -761,7 +761,7 @@
       "links_ok": true
     },
     {
-      "name": "paged-infer",
+      "name": "paged-serving",
       "account": "open-infra-ai",
       "visibility": "public",
       "property": "org-project",
@@ -940,7 +940,7 @@
     },
     {
       "name": "compress-kit",
-      "account": "build-workbench",
+      "account": "holtwood-projects",
       "visibility": "public",
       "property": "org-project",
       "language": "C++",
@@ -958,7 +958,7 @@
     },
     {
       "name": "cudaimg",
-      "account": "build-workbench",
+      "account": "holtwood-projects",
       "visibility": "public",
       "property": "org-project",
       "language": "CUDA",
@@ -971,6 +971,199 @@
           "signal": "CUDA 图像处理",
           "usage": "可作 CUDA 广度证据"
         }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "awesome-compression",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "categories": [
+        "holtwood-owned"
+      ],
+      "notes": {
+        "holtwood-owned": "无损压缩算法/库/工具中文精选清单（个人号维护）"
+      },
+      "links_ok": true,
+      "language": "Markdown",
+      "domain": "资源索引",
+      "ai_relevance": "低",
+      "resume_level": "低"
+    },
+    {
+      "name": "imshane-site",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "categories": [
+        "holtwood-owned"
+      ],
+      "notes": {
+        "holtwood-owned": "「简说笔记」个人站点（Astro Nano）"
+      },
+      "links_ok": true,
+      "language": "Astro",
+      "domain": "个人站点",
+      "ai_relevance": "无",
+      "resume_level": "无"
+    },
+    {
+      "name": "lsix",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "终端图片预览脚本；2025-07 DMCA 下架，API 返回 451，GitHub 不提供删除/转移入口，仅作记录"
+      },
+      "links_ok": false,
+      "upstream": "",
+      "language": "Shell",
+      "priority": "无"
+    },
+    {
+      "name": "DLX",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "自建翻译 API 服务；自用 fork，与 AI Infra 无关"
+      },
+      "links_ok": true,
+      "upstream": "OwO-Network/DLX",
+      "language": "Go",
+      "priority": "无",
+      "ahead": 0,
+      "behind": 15
+    },
+    {
+      "name": "axonhub",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "开源 AI Gateway（多模型统一接入）；自用 fork，与主线弱相关"
+      },
+      "links_ok": true,
+      "upstream": "looplj/axonhub",
+      "language": "Go",
+      "priority": "无",
+      "ahead": 0,
+      "behind": 0
+    },
+    {
+      "name": "fruit-ninja-dojo",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "原生 Canvas 水果忍者小游戏；自用 fork"
+      },
+      "links_ok": true,
+      "upstream": "yongqixue99-hue/fruit-ninja-dojo",
+      "language": "HTML",
+      "priority": "无",
+      "ahead": 0,
+      "behind": 0
+    },
+    {
+      "name": "gpt6-astra-one-shot-games",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "GPT-6 Astra One Shot 小游戏合集；自用 fork"
+      },
+      "links_ok": true,
+      "upstream": "Ayi1337/gpt6-astra-one-shot-games",
+      "language": "HTML",
+      "priority": "无",
+      "ahead": 1,
+      "behind": 0
+    },
+    {
+      "name": "massCode",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "开发者工作区（代码片段/笔记/HTTP 请求）；自用 fork"
+      },
+      "links_ok": true,
+      "upstream": "massCodeIO/massCode",
+      "language": "TypeScript",
+      "priority": "无",
+      "ahead": 0,
+      "behind": 75
+    },
+    {
+      "name": "patch-devin",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "Devin CLI 系统提示词补丁工具；自用 fork"
+      },
+      "links_ok": true,
+      "upstream": "a0yark/patch-devin",
+      "language": "Python",
+      "priority": "无",
+      "ahead": 0,
+      "behind": 0
+    },
+    {
+      "name": "web_search_devin",
+      "account": "holtwood-forks",
+      "visibility": "public",
+      "property": "fork",
+      "categories": [
+        "forks-and-translations"
+      ],
+      "notes": {
+        "forks-and-translations": "Devin 服务端 Web 搜索 MCP 服务器；自用 fork"
+      },
+      "links_ok": true,
+      "upstream": "mimimaster/windsurf-search-mcp",
+      "language": "JavaScript",
+      "priority": "无",
+      "ahead": 2,
+      "behind": 0
+    },
+    {
+      "name": ".github",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "language": "",
+      "domain": "账号配置",
+      "ai_relevance": "无",
+      "resume_level": "无",
+      "categories": [
+        "holtwood-owned"
+      ],
+      "notes": {
+        "holtwood-owned": "账号级社区健康文件与 Issue/PR 模板"
       },
       "links_ok": true
     }

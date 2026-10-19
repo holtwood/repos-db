@@ -1,14 +1,14 @@
 # 🗺️ GitHub Repos Hub — holtwood 项目主页
 
 > **我的开发项目主页**：主要开发项目一览 + 全部 GitHub 仓库的盘点、分类与导航中心。
-> 本仓库是仓库深读（deep-dives）的唯一事实来源；学习计划与面试准备见
-> [ai-infra-interview-prep](https://github.com/holtwood/ai-infra-interview-prep)，
-> AI Infra 五仓作品集见 [open-infra-ai/aicl-lab](https://github.com/open-infra-ai/aicl-lab)。
+> 本仓库是仓库深读的唯一事实来源；学习计划与面试准备见
+> [ai-infra-interview-prep](https://github.com/open-infra-ai/ai-infra-interview-prep)，
+> AI Infra 作品集入口见 [open-infra-ai/open-infra-ai](https://github.com/open-infra-ai/open-infra-ai)。
 
-**最近审计日期：2026-08-30**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
+**最近审计日期：2026-10-19**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--09--10-4c9) ![仓库总数](https://img.shields.io/badge/仓库-87-4c9) ![公开](https://img.shields.io/badge/公开-76-blue) ![Fork](https://img.shields.io/badge/Fork-26-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--10--19-4c9) ![仓库总数](https://img.shields.io/badge/仓库-118-4c9) ![公开](https://img.shields.io/badge/公开-84-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## ⭐ 主要项目精选
@@ -16,18 +16,18 @@
 <!-- AUTO:start featured -->
 | 项目 | 语言 | 归属 | 定位 |
 |---|---|---|---|
-| [aicl-lab](https://github.com/open-infra-ai/aicl-lab) | Markdown | open-infra-ai | 五仓 landing 页、计划与面试证据包唯一权威源 |
 | [cuda-foundations](https://github.com/open-infra-ai/cuda-foundations) | C++ | open-infra-ai | CUDA 算子工程学习路径，SGEMM 到可复用推理组件（原 cuda-kernel-academy） |
-| [cuflash-attn](https://github.com/open-infra-ai/cuflash-attn) | CUDA | open-infra-ai | 从零 CUDA C++ FlashAttention 前后向（FP16/BF16 WMMA），含 grid.y 越界修复与 causal 跳过优化 |
-| [paged-infer](https://github.com/open-infra-ai/paged-infer) | Rust | open-infra-ai | PagedAttention 分页 KV + Continuous Batching 控制面（Rust）；3 并发 e2e 与 llama.cpp greedy 对齐（诚实记录量化差异） |
+| [cuflash](https://github.com/open-infra-ai/cuflash) | CUDA | open-infra-ai | 从零 CUDA C++ FlashAttention 前后向（FP16/BF16 WMMA），含 grid.y 越界修复与 causal 跳过优化 |
+| [open-infra-ai](https://github.com/open-infra-ai/open-infra-ai) | Markdown | open-infra-ai | 五仓 landing 页、计划与面试证据包唯一权威源 |
+| [paged-serving](https://github.com/open-infra-ai/paged-serving) | Rust | open-infra-ai | PagedAttention 分页 KV + Continuous Batching 控制面（Rust）；3 并发 e2e 与 llama.cpp greedy 对齐（诚实记录量化差异） |
 | [tiny-llm](https://github.com/open-infra-ai/tiny-llm) | C++ | open-infra-ai | CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV 策略 1；TPOT ≈ 6.1 ms/token（本机实测，RTX 3060 Laptop）；170 tests |
-| [triton-fused-ops](https://github.com/open-infra-ai/triton-fused-ops) | Python | open-infra-ai | Triton 算子库（RMSNorm+RoPE/SwiGLU/FlashAttention/SGEMM）+ torch.library 注册 |
+| [trifuse](https://github.com/open-infra-ai/trifuse) | Python | open-infra-ai | Triton 算子库（RMSNorm+RoPE/SwiGLU/FlashAttention/SGEMM）+ torch.library 注册 |
 | [fastq-tools](https://github.com/open-genomics/fastq-tools) | C++ | open-genomics | FASTQ 质控工具：零拷贝 I/O、TBB 流水线 |
 | [fq-compressor](https://github.com/open-genomics/fq-compressor) | C++ | open-genomics | C++23 高性能 FASTQ 压缩：3.97x 压缩比、O(1) 随机访问、oneTBB 并发流水线、CI/Sanitizer |
 | [minibwa-rust](https://github.com/open-genomics/minibwa-rust) | Rust | open-genomics | Rust 重写 BWA 序列比对核心 |
-| [JadeAI](https://github.com/build-workbench/JadeAI) | TypeScript | build-workbench | AI 驱动的简历与求职工作台 |
-| [ai-infra-interview-prep](https://github.com/holtwood/ai-infra-interview-prep) | Markdown | holtwood | 12 周 AI Infra 转行计划、能力矩阵、面试执行 |
-| [cpp-high-performance-guide](https://github.com/hpc-workbench/cpp-high-performance-guide) | C++ | hpc-workbench | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
+| [JadeAI](https://github.com/holtwood-projects/JadeAI) | TypeScript | holtwood-projects | AI 驱动的简历与求职工作台 |
+| [ai-infra-interview-prep](https://github.com/open-infra-ai/ai-infra-interview-prep) | Markdown | open-infra-ai | 12 周 AI Infra 转行计划、能力矩阵、面试执行 |
+| [cpp-high-performance-guide](https://github.com/open-infra-ai/cpp-high-performance-guide) | C++ | open-infra-ai | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
 <!-- AUTO:end featured -->
 
 > 完整盘点见下方各分类与[文档站](https://holtwood.github.io/repos-db/)。
@@ -54,7 +54,7 @@
 完整盘点按分类：
 
 - [竞赛与赛题](catalog/competitions.md)（公开信息）
-- [holtwood 个人原创（非 Fork）公开仓库](catalog/holtwood-owned.md)
+- [原创（非 Fork）公开仓库盘点](catalog/holtwood-owned.md)
 - [Fork 与 AI 翻译仓库](catalog/forks-and-translations.md)
 - [组织仓库概览与贡献审计](catalog/organizations.md)
 - [组织下的原创项目（含贡献者审计）](catalog/original-projects.md)
@@ -67,25 +67,28 @@
 
 ## 账号概览
 
+<!-- AUTO:start accounts -->
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
-| holtwood（个人） | 18 | 14 | 4 | 4 |
-| open-infra-ai | 8 | 7 | 1 | 0 |
-| open-genomics | 14 | 9 | 5 | 0 |
-| build-workbench | 24 | 23 | 1 | 1 |
-| deep-dives | 21 | 21 | 0 | 21 |
-| hpc-workbench | 2 | 2 | 0 | 0 |
+| holtwood（个人） | 19 | 9 | 10 | 0 |
+| open-infra-ai（AI Infra 作品集） | 11 | 9 | 2 | 0 |
+| open-genomics（生物信息与 C++ 工程） | 13 | 9 | 4 | 0 |
+| holtwood-projects（完整可运行的项目与工具） | 26 | 25 | 1 | 1 |
+| holtwood-forks（上游研读副本与自用 fork） | 31 | 31 | 0 | 30 |
+| cannjudge（Ascend C 赛事归档） | 18 | 1 | 17 | 0 |
+<!-- AUTO:end accounts -->
 
-> 私有仓库信息不进入公开文档，仅说明"另有若干私有仓库未公开"。
+> 私有仓库信息不进入公开文档，仅说明"另有若干私有仓库未公开"；holtwood/lsix 因 DMCA 下架
+> （接口返回 451），不计入 GitHub 的公开仓库计数，仅在盘点中保留记录。
 
 ## 目录结构
 
 ```
 catalog/
   competitions.md           # 竞赛与赛题（仅公开信息）
-  holtwood-owned.md         # holtwood 个人原创（非 Fork）公开仓库
-  forks-and-translations.md # 22 个 Fork：上游、ahead/behind、中文注释范围
-  organizations.md          # 三个组织概览与贡献审计结论
+  holtwood-owned.md         # 原创（非 Fork）公开仓库盘点
+  forks-and-translations.md # 31 个 Fork：上游、ahead/behind、阅读建议与自用 fork
+  organizations.md          # 各账号/组织概览与贡献审计结论
   original-projects.md      # 组织下的原创项目（含贡献者审计）
   ai-infra.md               # AI Infra 视角：P0/P1/P2/P3 优先级与阅读范围
   hpc-and-transferable.md   # HPC 与可迁移能力项目
@@ -109,7 +112,7 @@ CHANGELOG.md
 | 仓库 | 职责 |
 |------|------|
 | repos-db（本仓库） | 仓库盘点、分类、导航、迁移记录、deep-dives |
-| [ai-infra-interview-prep](https://github.com/holtwood/ai-infra-interview-prep) | 12 周计划、学习 TODO、能力矩阵、面试执行 |
-| [open-infra-ai/aicl-lab](https://github.com/open-infra-ai/aicl-lab) | 五仓 AI Infra 技术证据与项目讲述的唯一事实来源 |
-| [holtwood/LessUp](https://github.com/holtwood/LessUp) | 个人主页与成果展示 |
+| [ai-infra-interview-prep](https://github.com/open-infra-ai/ai-infra-interview-prep) | 12 周计划、学习 TODO、能力矩阵、面试执行 |
+| [open-infra-ai/open-infra-ai](https://github.com/open-infra-ai/open-infra-ai) | AI Infra 技术证据与项目讲述的唯一事实来源 |
+| [holtwood/holtwood](https://github.com/holtwood/holtwood) | 个人主页与成果展示 |
 | [stars-db](https://github.com/holtwood/stars-db) | Star 资源分类索引（1300+ 条目） |

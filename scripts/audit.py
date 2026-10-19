@@ -22,10 +22,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "repos.json"
-# 注：vibe-knight 已更名为 build-workbench（GitHub 对旧名做 301 重定向，
-#     但 gh repo list 不接受旧名，会报 "not recognized as either a GitHub user or an organization"）
+# 注：组织已于 2026-10-19 更名：build-workbench -> holtwood-projects，
+#     deep-dives -> holtwood-forks，CANN-Judge -> cannjudge；hpc-workbench 已删除。
+#     GitHub 对旧名做 301 重定向，但 gh repo list 不接受旧名，
+#     会报 "not recognized as either a GitHub user or an organization"。
 ACCOUNTS = ["holtwood", "open-infra-ai", "open-genomics",
-            "build-workbench", "deep-dives", "hpc-workbench"]
+            "holtwood-projects", "holtwood-forks", "cannjudge"]
+
+# DMCA 下架仓库：API 返回 451，GitHub 不提供删除或转移入口，属长期已知状态，
+# 不计入每次审计的变更（否则每周都会误报"不可达"）。
+KNOWN_UNREACHABLE = {"holtwood/lsix"}
 
 
 def gh(args, check=True):
@@ -109,7 +115,8 @@ def main():
             continue
         meta = fetch_repo_meta(acct, name)
         if meta is None:
-            changes.append(f"{acct}/{name}: 404/不可达")
+            if f"{acct}/{name}" not in KNOWN_UNREACHABLE:
+                changes.append(f"{acct}/{name}: 404/不可达")
             repo["links_ok"] = False
             continue
         visibility, parent, is_fork, branch, language = meta
@@ -152,7 +159,9 @@ def main():
     for acct in ["holtwood"]:
         in_json = {r["name"] for r in data["repos"] if r["account"] == acct}
         missing = listed[acct] - in_json
-        extra = in_json - listed[acct]
+        # 已知不可达仓库（如 DMCA 下架）gh 不列出，不算"已删除/迁移"
+        extra = {n for n in in_json - listed[acct]
+                 if f"{acct}/{n}" not in KNOWN_UNREACHABLE}
         for name in sorted(missing):
             print(f"INFO: 新公开仓库未收录: {acct}/{name}（需人工补 categories/notes）")
         for name in sorted(extra):

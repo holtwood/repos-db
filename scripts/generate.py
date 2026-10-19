@@ -37,7 +37,8 @@ def repo_link(r):
 
 
 def upstream_link(r):
-    return f"[{r['upstream']}](https://github.com/{r['upstream']})"
+    up = r.get("upstream", "")
+    return f"[{up}](https://github.com/{up})" if up else ""
 
 
 def ahead_behind(r):
@@ -224,7 +225,9 @@ def render_accounts_table(data):
     rows = []
     for acct, info in data["accounts"].items():
         total = info["public"] + info["private"]
-        rows.append(f"| {acct} | {total} | {info['public']} | {info['private']} | {info['forks']} |")
+        note = info.get("note", "")
+        label = f"{acct}（{note}）" if note else acct
+        rows.append(f"| {label} | {total} | {info['public']} | {info['private']} | {info['forks']} |")
     return "\n".join([header, sep] + rows)
 
 
@@ -249,7 +252,7 @@ def render_badges(data, contests):
 
 
 # --- 精选区（README 顶部"主要开发项目"） ---
-FEATURED_EXCLUDE = {"repos-db", ".github", "LessUp"}
+FEATURED_EXCLUDE = {"repos-db", ".github", "holtwood"}
 RESUME_ORDER = {"高": 0, "中": 1, "低": 2, "": 3}
 AI_ORDER = {"高": 0, "中": 1, "低": 2, "无": 3, "": 4}
 PRIORITY_ORDER = {"P0": 0, "P1": 1, "P2": 2, "P3": 3, "无": 4, "": 4}
@@ -319,7 +322,7 @@ def readme_sections(data, contests):
 # sidebar 显示标题与各文件 H1 一致
 SIDEBAR_TITLES = {
     "competitions": "竞赛与赛题",
-    "holtwood-owned": "holtwood 个人原创（非 Fork）公开仓库",
+    "holtwood-owned": "原创（非 Fork）公开仓库盘点",
     "forks-and-translations": "Fork 与 AI 翻译仓库",
     "organizations": "组织仓库概览与贡献审计",
     "original-projects": "组织下的原创项目（含贡献者审计）",

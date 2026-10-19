@@ -8,19 +8,21 @@
 | 仓库 | 说明 |
 |---|---|
 | [stars-db](https://github.com/holtwood/stars-db) | 1300+ Star 项目分类索引（本 Hub 不复制其内容） |
-| [TensorTonic-Solutions](https://github.com/holtwood/TensorTonic-Solutions) | TensorTonic 题解 |
+| [tensortonic-solutions](https://github.com/holtwood/tensortonic-solutions) | TensorTonic 题解 |
 | [awesome-cursorrules-zh](https://github.com/holtwood/awesome-cursorrules-zh) | Cursor 规则中文精选（AI 翻译/整理性质） |
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | 个人博客 |
-| [JadeAI](https://github.com/build-workbench/JadeAI) | 求职工具 |
-| [Termius-Pro-zh_CN](https://github.com/holtwood/Termius-Pro-zh_CN) | Termius 汉化 |
+| [JadeAI](https://github.com/holtwood-projects/JadeAI) | 求职工具 |
+| [Termius-Pro-zh_CN](https://github.com/holtwood-forks/Termius-Pro-zh_CN) | Termius 汉化 |
 <!-- AUTO:end tools-and-unrelated -->
 
-## build-workbench 应用与工具
+## holtwood-projects 应用与工具
 
 bookmarks-manager、bookmarks-cleaner、graph-viewer、mind-gym、meta-human、
-yolo-toys、utop、chatroom、brave-sync-notes、webrtc-demo、webrtc-signaling、
-awesome-compression（实时系统与全栈实验，其中 WebRTC 系列可佐证实时系统背景，
-其余不进入 AI Infra 叙事）。
+yolo-toys、utop、chatroom、brave-sync-notes、webrtc-demo、webrtc-signaling
+（实时系统与全栈实验，其中 WebRTC 系列可佐证实时系统背景，其余不进入 AI Infra 叙事）。
+
+awesome-compression 已回到个人号 [holtwood](https://github.com/holtwood/awesome-compression)
+维护（社区资源清单，非 Infra 项目）。
 
 ## open-genomics 生物信息
 
