@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-10-19",
+  "audited_at": "2026-10-26",
   "accounts": {
     "holtwood": {
       "public": 9,
@@ -8,7 +8,7 @@
       "note": "个人"
     },
     "open-infra-ai": {
-      "public": 9,
+      "public": 10,
       "private": 2,
       "forks": 0,
       "note": "AI Infra 作品集"
@@ -54,7 +54,7 @@
       "notes": {
         "holtwood-owned": "12 周 AI Infra 转行计划、能力矩阵、面试执行"
       },
-      "links_ok": true
+      "links_ok": false
     },
     {
       "name": "repos-db",
@@ -362,7 +362,7 @@
       "property": "fork",
       "upstream": "Dao-AILab/flash-attention",
       "ahead": 2,
-      "behind": 58,
+      "behind": 65,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -380,7 +380,7 @@
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 1180,
+      "behind": 1628,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -398,7 +398,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 3698,
+      "behind": 4154,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -416,7 +416,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 4167,
+      "behind": 4736,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -434,7 +434,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 1906,
+      "behind": 2101,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -452,7 +452,7 @@
       "property": "fork",
       "upstream": "triton-lang/triton",
       "ahead": 0,
-      "behind": 562,
+      "behind": 612,
       "language": "MLIR",
       "priority": "P2",
       "categories": [
@@ -470,7 +470,7 @@
       "property": "fork",
       "upstream": "apache/tvm",
       "ahead": 1,
-      "behind": 412,
+      "behind": 427,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -488,7 +488,7 @@
       "property": "fork",
       "upstream": "ModelTC/LightLLM",
       "ahead": 12,
-      "behind": 88,
+      "behind": 99,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -596,7 +596,7 @@
       "property": "fork",
       "upstream": "open-mpi/ompi",
       "ahead": 13,
-      "behind": 361,
+      "behind": 406,
       "language": "C",
       "priority": "P3",
       "categories": [
@@ -618,7 +618,7 @@
       "visibility": "public",
       "property": "fork",
       "upstream": "ArcSurge/Termius-Pro-zh_CN",
-      "ahead": 10,
+      "ahead": 11,
       "behind": 0,
       "language": "Python",
       "priority": "无",
@@ -1058,7 +1058,7 @@
       "language": "Go",
       "priority": "无",
       "ahead": 0,
-      "behind": 0
+      "behind": 48
     },
     {
       "name": "fruit-ninja-dojo",

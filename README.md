@@ -8,7 +8,7 @@
 **最近审计日期：2026-10-19**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--10--19-4c9) ![仓库总数](https://img.shields.io/badge/仓库-118-4c9) ![公开](https://img.shields.io/badge/公开-84-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--10--26-4c9) ![仓库总数](https://img.shields.io/badge/仓库-119-4c9) ![公开](https://img.shields.io/badge/公开-85-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## ⭐ 主要项目精选
@@ -71,7 +71,7 @@
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
 | holtwood（个人） | 19 | 9 | 10 | 0 |
-| open-infra-ai（AI Infra 作品集） | 11 | 9 | 2 | 0 |
+| open-infra-ai（AI Infra 作品集） | 12 | 10 | 2 | 0 |
 | open-genomics（生物信息与 C++ 工程） | 13 | 9 | 4 | 0 |
 | holtwood-projects（完整可运行的项目与工具） | 26 | 25 | 1 | 1 |
 | holtwood-forks（上游研读副本与自用 fork） | 31 | 31 | 0 | 30 |
