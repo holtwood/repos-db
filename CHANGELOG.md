@@ -10,6 +10,7 @@
   只收录公开可访问信息，私有解题仓库名称与路径不进入本仓库。
 
 ### Changed
+- 数据快照更新（2026-11-02）：ahead/behind 与链接状态已刷新
 - 组织改名终稿落地：build-workbench→holtwood-projects、deep-dives→holtwood-forks、CANN-Judge→cannjudge；9 个个人号 fork 迁入 holtwood-forks，账号计数、链接与迁移记录同步
 - 数据快照更新（2026-09-10）：ahead/behind 与链接状态已刷新
 - 账号迁移:LessUp → holtwood(repos-db);README 主页化 + GitHub Pages 部署
