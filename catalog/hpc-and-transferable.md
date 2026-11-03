@@ -14,6 +14,7 @@ SIMD、压缩、实时系统），在面试中作为背景与辅助证据使用�
 | [minibwa-rust](https://github.com/open-genomics/minibwa-rust) | Rust 系统编程、算法重写 | 辅助 |
 | [compress-kit](https://github.com/holtwood-projects/compress-kit) | 跨语言压缩算法与二进制级验证 | 低优先级 |
 | [cudaimg](https://github.com/holtwood-projects/cudaimg) | CUDA 图像处理 | 可作 CUDA 广度证据 |
+| [race](https://github.com/holtwood/race) | CPU 侧性能工程：解析、内存布局、并行与测量方法 | 可迁移能力 |
 <!-- AUTO:end hpc-and-transferable -->
 
 ## Fork 与已删除记录

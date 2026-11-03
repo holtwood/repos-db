@@ -1,14 +1,14 @@
 {
-  "audited_at": "2026-10-19",
+  "audited_at": "2026-11-03",
   "accounts": {
     "holtwood": {
-      "public": 9,
+      "public": 11,
       "private": 10,
       "forks": 0,
       "note": "个人"
     },
     "open-infra-ai": {
-      "public": 9,
+      "public": 10,
       "private": 2,
       "forks": 0,
       "note": "AI Infra 作品集"
@@ -20,15 +20,15 @@
       "note": "生物信息与 C++ 工程"
     },
     "holtwood-projects": {
-      "public": 25,
+      "public": 23,
       "private": 1,
-      "forks": 1,
+      "forks": 0,
       "note": "完整可运行的项目与工具"
     },
     "holtwood-forks": {
-      "public": 31,
+      "public": 32,
       "private": 0,
-      "forks": 30,
+      "forks": 31,
       "note": "上游研读副本与自用 fork"
     },
     "cannjudge": {
@@ -42,7 +42,7 @@
     {
       "name": "ai-infra-interview-prep",
       "account": "open-infra-ai",
-      "visibility": "public",
+      "visibility": "private",
       "property": "original",
       "language": "Markdown",
       "domain": "求职规划",
@@ -212,22 +212,19 @@
     },
     {
       "name": "JadeAI",
-      "account": "holtwood-projects",
+      "account": "holtwood-forks",
       "visibility": "public",
-      "property": "original",
+      "property": "fork",
       "language": "TypeScript",
-      "domain": "求职工具",
-      "ai_relevance": "高",
-      "resume_level": "中",
       "categories": [
-        "holtwood-owned",
-        "tools-and-unrelated"
+        "forks-and-translations"
       ],
       "notes": {
-        "holtwood-owned": "AI 驱动的简历与求职工作台",
-        "tools-and-unrelated": "求职工具"
+        "forks-and-translations": "AI 简历/求职工作台；自用 fork（自 holtwood-projects 归位）"
       },
-      "links_ok": true
+      "links_ok": true,
+      "upstream": "LingyiChen-AI/JadeAI",
+      "priority": "无"
     },
     {
       "name": "cuda-samples",
@@ -362,7 +359,7 @@
       "property": "fork",
       "upstream": "Dao-AILab/flash-attention",
       "ahead": 2,
-      "behind": 58,
+      "behind": 76,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -380,7 +377,7 @@
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 1180,
+      "behind": 2487,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -398,7 +395,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 3698,
+      "behind": 4774,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -416,7 +413,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 4167,
+      "behind": 5366,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -434,7 +431,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 1906,
+      "behind": 2392,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -452,7 +449,7 @@
       "property": "fork",
       "upstream": "triton-lang/triton",
       "ahead": 0,
-      "behind": 562,
+      "behind": 671,
       "language": "MLIR",
       "priority": "P2",
       "categories": [
@@ -470,7 +467,7 @@
       "property": "fork",
       "upstream": "apache/tvm",
       "ahead": 1,
-      "behind": 412,
+      "behind": 429,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -488,7 +485,7 @@
       "property": "fork",
       "upstream": "ModelTC/LightLLM",
       "ahead": 12,
-      "behind": 88,
+      "behind": 111,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -542,7 +539,7 @@
       "property": "fork",
       "upstream": "tylerelyt/LLM-Workshop",
       "ahead": 8,
-      "behind": 0,
+      "behind": 1,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -578,7 +575,7 @@
       "property": "fork",
       "upstream": "triton-inference-server/tutorials",
       "ahead": 7,
-      "behind": 8,
+      "behind": 9,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -596,7 +593,7 @@
       "property": "fork",
       "upstream": "open-mpi/ompi",
       "ahead": 13,
-      "behind": 361,
+      "behind": 425,
       "language": "C",
       "priority": "P3",
       "categories": [
@@ -618,8 +615,8 @@
       "visibility": "public",
       "property": "fork",
       "upstream": "ArcSurge/Termius-Pro-zh_CN",
-      "ahead": 10,
-      "behind": 0,
+      "ahead": 11,
+      "behind": 5,
       "language": "Python",
       "priority": "无",
       "categories": [
@@ -648,7 +645,7 @@
       },
       "links_ok": true,
       "ahead": 0,
-      "behind": 2
+      "behind": 3
     },
     {
       "name": "open-infra-ai",
@@ -1058,7 +1055,7 @@
       "language": "Go",
       "priority": "无",
       "ahead": 0,
-      "behind": 0
+      "behind": 126
     },
     {
       "name": "fruit-ninja-dojo",
@@ -1112,7 +1109,7 @@
       "language": "TypeScript",
       "priority": "无",
       "ahead": 0,
-      "behind": 75
+      "behind": 83
     },
     {
       "name": "patch-devin",
@@ -1164,6 +1161,47 @@
       ],
       "notes": {
         "holtwood-owned": "账号级社区健康文件与 Issue/PR 模板"
+      },
+      "links_ok": true
+    },
+    {
+      "name": "race",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "language": "Shell",
+      "domain": "性能工程",
+      "ai_relevance": "中",
+      "resume_level": "中",
+      "categories": [
+        "holtwood-owned",
+        "hpc-and-transferable"
+      ],
+      "notes": {
+        "holtwood-owned": "性能工程竞赛实验室：Speed Demon/1BRC/PPC/DIMACS/AHC 练习与成绩台账",
+        "hpc-and-transferable": {
+          "signal": "CPU 侧性能工程：解析、内存布局、并行与测量方法",
+          "usage": "可迁移能力"
+        }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "cmdc-statusline",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "language": "TypeScript",
+      "domain": "开发者工具",
+      "ai_relevance": "中",
+      "resume_level": "中",
+      "categories": [
+        "holtwood-owned",
+        "tools-and-unrelated"
+      ],
+      "notes": {
+        "holtwood-owned": "cmdc 状态栏插件：模型/上下文/缓存命中/成本，多语言文档与文档站",
+        "tools-and-unrelated": "CLI 状态栏工具"
       },
       "links_ok": true
     }

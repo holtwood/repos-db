@@ -9,7 +9,7 @@
 **最近审计日期：2026-10-19**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--10--19-4c9) ![仓库总数](https://img.shields.io/badge/仓库-118-4c9) ![公开](https://img.shields.io/badge/公开-84-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--03-4c9) ![仓库总数](https://img.shields.io/badge/仓库-120-4c9) ![公开](https://img.shields.io/badge/公开-86-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-12-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## ⭐ 主要项目精选
@@ -26,8 +26,9 @@
 | [fastq-tools](https://github.com/open-genomics/fastq-tools) | C++ | open-genomics | FASTQ 质控工具：零拷贝 I/O、TBB 流水线 |
 | [fq-compressor](https://github.com/open-genomics/fq-compressor) | C++ | open-genomics | C++23 高性能 FASTQ 压缩：3.97x 压缩比、O(1) 随机访问、oneTBB 并发流水线、CI/Sanitizer |
 | [minibwa-rust](https://github.com/open-genomics/minibwa-rust) | Rust | open-genomics | Rust 重写 BWA 序列比对核心 |
-| [JadeAI](https://github.com/holtwood-projects/JadeAI) | TypeScript | holtwood-projects | AI 驱动的简历与求职工作台 |
 | [ai-infra-interview-prep](https://github.com/open-infra-ai/ai-infra-interview-prep) | Markdown | open-infra-ai | 12 周 AI Infra 转行计划、能力矩阵、面试执行 |
+| [cmdc-statusline](https://github.com/holtwood/cmdc-statusline) | TypeScript | holtwood | cmdc 状态栏插件：模型/上下文/缓存命中/成本，多语言文档与文档站 |
+| [race](https://github.com/holtwood/race) | Shell | holtwood | 性能工程竞赛实验室：Speed Demon/1BRC/PPC/DIMACS/AHC 练习与成绩台账 |
 | [cpp-high-performance-guide](https://github.com/open-infra-ai/cpp-high-performance-guide) | C++ | open-infra-ai | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
 <!-- AUTO:end featured -->
 
@@ -71,11 +72,11 @@
 <!-- AUTO:start accounts -->
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
-| holtwood（个人） | 19 | 9 | 10 | 0 |
-| open-infra-ai（AI Infra 作品集） | 11 | 9 | 2 | 0 |
+| holtwood（个人） | 21 | 11 | 10 | 0 |
+| open-infra-ai（AI Infra 作品集） | 12 | 10 | 2 | 0 |
 | open-genomics（生物信息与 C++ 工程） | 13 | 9 | 4 | 0 |
-| holtwood-projects（完整可运行的项目与工具） | 26 | 25 | 1 | 1 |
-| holtwood-forks（上游研读副本与自用 fork） | 31 | 31 | 0 | 30 |
+| holtwood-projects（完整可运行的项目与工具） | 24 | 23 | 1 | 0 |
+| holtwood-forks（上游研读副本与自用 fork） | 32 | 32 | 0 | 31 |
 | cannjudge（Ascend C 赛事归档） | 18 | 1 | 17 | 0 |
 <!-- AUTO:end accounts -->
 

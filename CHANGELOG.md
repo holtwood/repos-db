@@ -6,9 +6,11 @@
 
 ### Fixed
 - README 两处指向 `open-infra-ai/ai-infra-interview-prep` 的失效公开链接：该仓已于 2026-10-25 迁回 `holtwood` 并转私有，改为按私有仓表述（职责边界表同步）。
+- `JadeAI` 实为 `LingyiChen-AI/JadeAI` 的 fork，自 `holtwood-projects` 迁回 `holtwood-forks`，repos.json 同步修正 account/property/upstream。
 
 ### Added
 - README 职责边界表新增 [holtwood/race](https://github.com/holtwood/race)：性能工程竞赛实验室（Speed Demon / 1BRC / PPC / DIMACS / AHC）。
+- 数据快照更新（2026-11-03，audit.py）：补录 `race`（holtwood-owned / hpc-and-transferable）与 `cmdc-statusline`（holtwood-owned / tools-and-unrelated）；21 处字段刷新（ahead/behind、可见性、账号计数）。
 
 ## [Unreleased] — 2026-08-19
 

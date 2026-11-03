@@ -11,8 +11,8 @@
 | [tensortonic-solutions](https://github.com/holtwood/tensortonic-solutions) | TensorTonic 题解 |
 | [awesome-cursorrules-zh](https://github.com/holtwood/awesome-cursorrules-zh) | Cursor 规则中文精选（AI 翻译/整理性质） |
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | 个人博客 |
-| [JadeAI](https://github.com/holtwood-projects/JadeAI) | 求职工具 |
 | [Termius-Pro-zh_CN](https://github.com/holtwood-forks/Termius-Pro-zh_CN) | Termius 汉化 |
+| [cmdc-statusline](https://github.com/holtwood/cmdc-statusline) | CLI 状态栏工具 |
 <!-- AUTO:end tools-and-unrelated -->
 
 ## holtwood-projects 应用与工具
