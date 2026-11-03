@@ -1,9 +1,10 @@
 # 🗺️ GitHub Repos Hub — holtwood 项目主页
 
 > **我的开发项目主页**：主要开发项目一览 + 全部 GitHub 仓库的盘点、分类与导航中心。
-> 本仓库是仓库深读的唯一事实来源；学习计划与面试准备见
-> [ai-infra-interview-prep](https://github.com/open-infra-ai/ai-infra-interview-prep)，
-> AI Infra 作品集入口见 [open-infra-ai/open-infra-ai](https://github.com/open-infra-ai/open-infra-ai)。
+> 本仓库是仓库深读的唯一事实来源；学习计划与面试准备在个人私有仓
+> `ai-infra-interview-prep`（2026-10-25 自 open-infra-ai 迁回并转私有，不对外公开链接），
+> AI Infra 作品集入口见 [open-infra-ai/open-infra-ai](https://github.com/open-infra-ai/open-infra-ai)，
+> 性能竞赛练习见 [holtwood/race](https://github.com/holtwood/race)。
 
 **最近审计日期：2026-10-19**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
@@ -112,7 +113,8 @@ CHANGELOG.md
 | 仓库 | 职责 |
 |------|------|
 | repos-db（本仓库） | 仓库盘点、分类、导航、迁移记录、deep-dives |
-| [ai-infra-interview-prep](https://github.com/open-infra-ai/ai-infra-interview-prep) | 12 周计划、学习 TODO、能力矩阵、面试执行 |
+| `ai-infra-interview-prep`（私有） | 12 周计划、学习 TODO、能力矩阵、面试执行（2026-10-25 自 open-infra-ai 迁回 holtwood 并转私有） |
 | [open-infra-ai/open-infra-ai](https://github.com/open-infra-ai/open-infra-ai) | AI Infra 技术证据与项目讲述的唯一事实来源 |
+| [holtwood/race](https://github.com/holtwood/race) | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC 练习与成绩台账 |
 | [holtwood/holtwood](https://github.com/holtwood/holtwood) | 个人主页与成果展示 |
 | [stars-db](https://github.com/holtwood/stars-db) | Star 资源分类索引（1300+ 条目） |

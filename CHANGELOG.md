@@ -2,6 +2,14 @@
 
 本文件遵循 [Keep a Changelog](https://keepachangelog.com/) 格式。
 
+## [Unreleased] — 2026-11-03
+
+### Fixed
+- README 两处指向 `open-infra-ai/ai-infra-interview-prep` 的失效公开链接：该仓已于 2026-10-25 迁回 `holtwood` 并转私有，改为按私有仓表述（职责边界表同步）。
+
+### Added
+- README 职责边界表新增 [holtwood/race](https://github.com/holtwood/race)：性能工程竞赛实验室（Speed Demon / 1BRC / PPC / DIMACS / AHC）。
+
 ## [Unreleased] — 2026-08-19
 
 ### Added
