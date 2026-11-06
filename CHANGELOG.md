@@ -5,6 +5,7 @@
 ## [2026-11-06]
 
 ### Changed
+- 数据快照更新（2026-11-06）：ahead/behind 与链接状态已刷新
 - 仓库导航按新组织架构重排：`holtwood`（个人主品牌）、`holtwood-systems`（AI Infra / HPC）、
   `holtwood-arena`（比赛与 benchmark）、`holtwood-forks`（上游研读）、`holtwood-projects`
   （历史应用）、`open-genomics`（生信旧主线，维护模式）。
