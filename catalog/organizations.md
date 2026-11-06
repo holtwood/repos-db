@@ -17,7 +17,7 @@
 
 ## holtwood-systems（原创 AI Infra / HPC）
 
-9 个公开仓库，贡献者审计仅 holtwood（另有 CI/dependabot bot）。这是当前简历主线；
+10 个公开仓库（含 1 个归档旧名仓库），贡献者审计仅 holtwood（另有 CI/dependabot bot）。这是当前简历主线；
 下列仓库可以如实表述为“个人主导开发”的组织仓库。
 
 <!-- AUTO:start organizations -->
@@ -31,6 +31,7 @@
 | [tiny-llm](https://github.com/holtwood-systems/tiny-llm) | C++ | MIT | holtwood | L4：CUDA 原生 C++ 推理引擎（GGUF/W8A16/分页 KV） |
 | [paged-serving](https://github.com/holtwood-systems/paged-serving) | Rust | MIT | holtwood | L4：PagedAttention 分页 KV + Continuous Batching 控制面 |
 | [.github](https://github.com/holtwood-systems/.github) | - | - | - | 组织级配置 |
+| [open-infra-ai](https://github.com/holtwood-systems/open-infra-ai) | TypeScript | - | - | [archived] 旧组织名重复仓库，内容已由 portfolio 承接 |
 | [kvtier](https://github.com/holtwood-systems/kvtier) | Python | - | holtwood | 主动研究：SGLang HiCache / vLLM KV offloading 的分层复现 |
 <!-- AUTO:end organizations -->
 

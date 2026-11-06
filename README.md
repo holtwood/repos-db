@@ -8,7 +8,7 @@
 **最近审计日期：2026-11-06**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--11--06-4c9) ![仓库总数](https://img.shields.io/badge/仓库-132-4c9) ![公开](https://img.shields.io/badge/公开-90-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--06-4c9) ![仓库总数](https://img.shields.io/badge/仓库-133-4c9) ![公开](https://img.shields.io/badge/公开-91-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## 🧭 架构
@@ -79,7 +79,7 @@
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
 | holtwood（个人身份 / 索引 / 私有实验） | 25 | 13 | 12 | 0 |
-| holtwood-systems（AI Infra / HPC 系统） | 9 | 9 | 0 | 0 |
+| holtwood-systems（AI Infra / HPC 系统） | 10 | 10 | 0 | 0 |
 | holtwood-arena（比赛与 benchmark） | 29 | 4 | 25 | 0 |
 | holtwood-forks（上游研读） | 32 | 32 | 0 | 31 |
 | holtwood-projects（历史应用与工具 · 维护模式） | 24 | 23 | 1 | 0 |

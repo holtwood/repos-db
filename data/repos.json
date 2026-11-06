@@ -8,7 +8,7 @@
       "note": "个人身份 / 索引 / 私有实验"
     },
     "holtwood-systems": {
-      "public": 9,
+      "public": 10,
       "private": 0,
       "forks": 0,
       "note": "AI Infra / HPC 系统"
@@ -781,6 +781,23 @@
       "notes": {
         "organizations": "组织级配置"
       }
+    },
+    {
+      "name": "open-infra-ai",
+      "account": "holtwood-systems",
+      "visibility": "public",
+      "property": "org-project",
+      "language": "TypeScript",
+      "domain": "归档旧名",
+      "ai_relevance": "无",
+      "archived": true,
+      "categories": [
+        "organizations"
+      ],
+      "notes": {
+        "organizations": "[archived] 旧组织名重复仓库，内容已由 portfolio 承接"
+      },
+      "links_ok": true
     },
     {
       "name": "fq-compressor",
