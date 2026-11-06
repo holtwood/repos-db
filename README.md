@@ -8,7 +8,7 @@
 **最近审计日期：2026-11-06**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--11--06-4c9) ![仓库总数](https://img.shields.io/badge/仓库-131-4c9) ![公开](https://img.shields.io/badge/公开-89-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--06-4c9) ![仓库总数](https://img.shields.io/badge/仓库-132-4c9) ![公开](https://img.shields.io/badge/公开-90-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## 🧭 架构
@@ -34,6 +34,7 @@
 | [tiny-llm](https://github.com/holtwood-systems/tiny-llm) | C++ | holtwood-systems | CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV；性能数字以仓库当前报告为准 |
 | [trifuse](https://github.com/holtwood-systems/trifuse) | Python | holtwood-systems | Triton 算子库（RMSNorm+RoPE/SwiGLU/FlashAttention/SGEMM）+ torch.library 注册 |
 | [race](https://github.com/holtwood-arena/race) | Python | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 |
+| [ascend-llm-infra-lab](https://github.com/holtwood/ascend-llm-infra-lab) | Python | holtwood | Ascend 910B2 vLLM serving 实验体系：50+ 可复现实验（KV 账本、goodput/SLO、调度消融、量化、多副本扩展） |
 | [ai-infra-serving-study-plan](https://github.com/holtwood/ai-infra-serving-study-plan) | Markdown | holtwood | AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine |
 | [cpp-high-performance-guide](https://github.com/holtwood-systems/cpp-high-performance-guide) | C++ | holtwood-systems | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
 <!-- AUTO:end featured -->
@@ -77,7 +78,7 @@
 <!-- AUTO:start accounts -->
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
-| holtwood（个人身份 / 索引 / 私有实验） | 24 | 12 | 12 | 0 |
+| holtwood（个人身份 / 索引 / 私有实验） | 25 | 13 | 12 | 0 |
 | holtwood-systems（AI Infra / HPC 系统） | 9 | 9 | 0 | 0 |
 | holtwood-arena（比赛与 benchmark） | 29 | 4 | 25 | 0 |
 | holtwood-forks（上游研读） | 32 | 32 | 0 | 31 |

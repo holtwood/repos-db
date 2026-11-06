@@ -2,7 +2,7 @@
   "audited_at": "2026-11-06",
   "accounts": {
     "holtwood": {
-      "public": 12,
+      "public": 13,
       "private": 12,
       "forks": 0,
       "note": "个人身份 / 索引 / 私有实验"
@@ -1193,6 +1193,23 @@
       ],
       "notes": {
         "holtwood-owned": "AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine"
+      },
+      "links_ok": true
+    },
+    {
+      "name": "ascend-llm-infra-lab",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "language": "Python",
+      "domain": "AI Infra 实验",
+      "ai_relevance": "高",
+      "resume_level": "高",
+      "categories": [
+        "holtwood-owned"
+      ],
+      "notes": {
+        "holtwood-owned": "Ascend 910B2 vLLM serving 实验体系：50+ 可复现实验（KV 账本、goodput/SLO、调度消融、量化、多副本扩展）"
       },
       "links_ok": true
     },

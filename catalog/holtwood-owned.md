@@ -16,6 +16,7 @@
 | [imshane-site](https://github.com/holtwood/imshane-site) | Astro | 个人站点 | 无 | 无 | 「简说笔记」个人站点（Astro Nano） |
 | [.github](https://github.com/holtwood/.github) | - | 账号配置 | 无 | 无 | 账号级社区健康文件与 Issue/PR 模板 |
 | [ai-infra-serving-study-plan](https://github.com/holtwood/ai-infra-serving-study-plan) | Markdown | 学习计划 | 高 | 中 | AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine |
+| [ascend-llm-infra-lab](https://github.com/holtwood/ascend-llm-infra-lab) | Python | AI Infra 实验 | 高 | 高 | Ascend 910B2 vLLM serving 实验体系：50+ 可复现实验（KV 账本、goodput/SLO、调度消融、量化、多副本扩展） |
 | [ai-infra-radar](https://github.com/holtwood/ai-infra-radar) | Python | 贡献雷达 | 中 | 低 | AI Infra 上游 issue/discussion 发现与 triage 工具 |
 | [cmdc-statusline](https://github.com/holtwood/cmdc-statusline) | TypeScript | 开发者工具 | 低 | 低 | Command Code 状态栏：模型、上下文、成本、git 状态 |
 <!-- AUTO:end holtwood-owned -->
