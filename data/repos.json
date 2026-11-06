@@ -1384,19 +1384,9 @@
       "note": "→ holtwood-arena/race"
     },
     {
-      "old": "holtwood/flagos-s2-*",
-      "status": "transferred",
-      "note": "→ holtwood-arena/flagos-s2-*"
-    },
-    {
       "old": "holtwood/kunpeng-*",
       "status": "transferred",
       "note": "→ holtwood-arena/kunpeng-*"
-    },
-    {
-      "old": "holtwood/muse-spark-*",
-      "status": "transferred",
-      "note": "→ holtwood-arena/muse-spark-*"
     },
     {
       "old": "holtwood/ai-infra-serving",
