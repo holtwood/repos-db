@@ -85,6 +85,14 @@ def main():
         print("ERROR: gh CLI 不可用", file=sys.stderr)
         sys.exit(2)
 
+    # 认证探针：token 失效时 gh api 会对每个仓库返回 401。
+    # 若继续执行，所有仓库会被误标为 links_ok=false，并生成错误 PR。
+    probe = gh(["api", "repos/holtwood/repos-db"], check=False)
+    if probe.returncode != 0:
+        print(f"ERROR: GitHub API 认证失败，未修改数据: {probe.stderr.strip()}",
+              file=sys.stderr)
+        sys.exit(2)
+
     data = load_data()
     changes = []
 
