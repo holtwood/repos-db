@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-11-06",
   "scope": "只收录公开可访问的信息（比赛名、公开题目页、problem_id、难度）。解题仓库为私有仓库，其名称、路径与内容不进入本仓库（见 methodology.md）。",
   "platforms": {
     "cannjudge": {
@@ -19,7 +19,7 @@
       "contest_id": "6aa3bb4f2d3dd2c5aeab7eef",
       "period": "2026-09-20 ~ 2026-11-06",
       "page": "https://cannjudge.cn/public/2026_electronic",
-      "status": "进行中",
+      "status": "已结束",
       "env": "CANN 9.0.0 · Ascend 910B",
       "problems": [
         {
@@ -101,15 +101,36 @@
       "contest_id": null,
       "period": "2026-10",
       "page": null,
-      "status": "进行中",
+      "status": "已结束",
       "env": "CANN 9.0.0 · Ascend 910B",
       "problems": [
         {
           "seq": "01",
+          "title": "共享操作数双路乘法与归约融合算子 ConfusionMulGrad",
+          "problem_id": null,
+          "difficulty": null,
+          "page": "https://cannjudge.cn/public/ladder_october/confusionmulgrad"
+        },
+        {
+          "seq": "02",
           "title": "转置卷积算子 ConvTranspose2D",
           "problem_id": null,
           "difficulty": null,
-          "page": null
+          "page": "https://cannjudge.cn/public/ladder_october/convtranspose2d"
+        },
+        {
+          "seq": "03",
+          "title": "FlashAttention 注意力算子",
+          "problem_id": null,
+          "difficulty": null,
+          "page": "https://cannjudge.cn/public/ladder_october/flashattention"
+        },
+        {
+          "seq": "04",
+          "title": "MhcSinkhornGrad 反向算子",
+          "problem_id": null,
+          "difficulty": null,
+          "page": "https://cannjudge.cn/public/ladder_october/mhcsinkhorngrad"
         }
       ]
     },
@@ -120,7 +141,7 @@
       "contest_id": null,
       "period": "2026",
       "page": null,
-      "status": "进行中",
+      "status": "已归档",
       "env": "CANN 9.0.0 · Ascend 910B",
       "problems": [
         {

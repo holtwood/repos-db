@@ -2,6 +2,19 @@
 
 本文件遵循 [Keep a Changelog](https://keepachangelog.com/) 格式。
 
+## [2026-11-06]
+
+### Changed
+- 仓库导航按新组织架构重排：`holtwood`（个人主品牌）、`holtwood-systems`（AI Infra / HPC）、
+  `holtwood-arena`（比赛与 benchmark）、`holtwood-forks`（上游研读）、`holtwood-projects`
+  （历史应用）、`open-genomics`（生信旧主线，维护模式）。
+- `open-infra-ai` → `holtwood-systems`、`cannjudge` → `holtwood-arena` 的组织改名与仓库
+  归属同步到账号统计、链接与迁移记录；旧组织根 404，仓库级旧地址仍靠 301。
+- README 精选区改为当前主线优先，生信旧主线退出首屏；`holtwood-owned.md` 只列个人号
+  原创仓库，迁入组织的 `cpp-high-performance-guide` 归入 `holtwood-systems` 组织表。
+- 竞赛索引收口：CANN 2026 电力行业算子专场结束；十月天梯赛补 4 道公开题目页；
+  2026 CANN 挑战赛西北赛区初赛归档。私有赛事工作区不因比赛结束公开，也不在文档中列举。
+
 ## [Unreleased] — 2026-11-03
 
 ### Fixed

@@ -22,12 +22,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "repos.json"
-# 注：组织已于 2026-10-19 更名：build-workbench -> holtwood-projects，
-#     deep-dives -> holtwood-forks，CANN-Judge -> cannjudge；hpc-workbench 已删除。
-#     GitHub 对旧名做 301 重定向，但 gh repo list 不接受旧名，
-#     会报 "not recognized as either a GitHub user or an organization"。
-ACCOUNTS = ["holtwood", "open-infra-ai", "open-genomics",
-            "holtwood-projects", "holtwood-forks", "cannjudge"]
+# 2026-11-06 组织终态：open-infra-ai -> holtwood-systems，cannjudge -> holtwood-arena。
+# GitHub 对旧名做仓库级 301，但组织根 404；gh repo list 不接受旧名。
+ACCOUNTS = ["holtwood", "holtwood-systems", "holtwood-arena", "open-genomics",
+            "holtwood-projects", "holtwood-forks"]
 
 # DMCA 下架仓库：API 返回 451，GitHub 不提供删除或转移入口，属长期已知状态，
 # 不计入每次审计的变更（否则每周都会误报"不可达"）。

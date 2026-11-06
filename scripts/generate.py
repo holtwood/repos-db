@@ -57,7 +57,7 @@ def note(slug, key=None):
 
 CATEGORY_CONFIG = {
     "holtwood-owned": {
-        "title": "holtwood 个人原创",
+        "title": "holtwood 个人原创与索引",
         "headers": ["仓库", "语言", "领域", "AI Infra 相关性", "简历可用性", "说明"],
         "cols": [repo_link, lambda r: r.get("language", ""), lambda r: r.get("domain", ""),
                  lambda r: r.get("ai_relevance", ""), lambda r: r.get("resume_level", ""),
@@ -70,19 +70,19 @@ CATEGORY_CONFIG = {
                  lambda r: r.get("priority", ""), note("forks-and-translations")],
     },
     "organizations": {
-        "title": "open-infra-ai（AI Infra 作品集）",
+        "title": "holtwood-systems（AI Infra / HPC 系统）",
         "headers": ["仓库", "语言", "License", "贡献者", "定位"],
         "cols": [repo_link, lambda r: r.get("language", ""), lambda r: r.get("license", ""),
                  lambda r: r.get("contributors", ""), note("organizations")],
     },
     "original-projects": {
-        "title": "open-infra-ai — AI Infra 作品集（P0，简历主线）",
-        "headers": ["项目", "定位与证据", "简历用法"],
-        "cols": [repo_link, note("original-projects", "position"),
+        "title": "holtwood-systems + holtwood-arena — 原创系统与公开赛道",
+        "headers": ["项目", "归属", "定位与证据", "简历用法"],
+        "cols": [repo_link, lambda r: r.get("account", ""), note("original-projects", "position"),
                  note("original-projects", "resume")],
     },
     "original-projects-genomics": {
-        "title": "open-genomics — 生物信息与 C++ 工程（P0 辅助 / P2）",
+        "title": "open-genomics — 旧主线（维护模式）",
         "headers": ["项目", "定位", "简历用法"],
         "cols": [repo_link, note("original-projects", "position"),
                  note("original-projects", "resume")],
@@ -94,7 +94,7 @@ CATEGORY_CONFIG = {
                  note("hpc-and-transferable", "usage")],
     },
     "tools-and-unrelated": {
-        "title": "holtwood 个人",
+        "title": "holtwood 个人工具与索引",
         "headers": ["仓库", "说明"],
         "cols": [repo_link, note("tools-and-unrelated")],
     },
@@ -111,6 +111,9 @@ def load_data():
 def repos_for_slug(data, slug):
     """返回某分类（渲染 slug）对应的仓库列表。"""
     base = slug.replace("-genomics", "")
+    if slug == "holtwood-owned":
+        return [r for r in data["repos"] if base in r["categories"]
+                and r["account"] == "holtwood"]
     if slug == "original-projects-genomics":
         return [r for r in data["repos"] if base in r["categories"]
                 and r["account"] == "open-genomics"]
@@ -253,6 +256,7 @@ def render_badges(data, contests):
 
 # --- 精选区（README 顶部"主要开发项目"） ---
 FEATURED_EXCLUDE = {"repos-db", ".github", "holtwood"}
+FEATURED_LIMIT = 10
 RESUME_ORDER = {"高": 0, "中": 1, "低": 2, "": 3}
 AI_ORDER = {"高": 0, "中": 1, "低": 2, "无": 3, "": 4}
 PRIORITY_ORDER = {"P0": 0, "P1": 1, "P2": 2, "P3": 3, "无": 4, "": 4}
@@ -265,13 +269,19 @@ def featured_tagline(r):
         if isinstance(v, dict):
             return v.get("position", "")
         return v if isinstance(v, str) else ""
-    v = r.get("notes", {}).get("holtwood-owned", "")
-    return v if isinstance(v, str) else ""
+    notes = r.get("notes", {})
+    for key in ("holtwood-owned", "organizations"):
+        v = notes.get(key, "")
+        if isinstance(v, str) and v:
+            return v
+    return ""
 
 
 def is_featured(r):
     """主要开发项目入选规则：original（简历高/中）或 org-project（P0 且个人主导）。"""
     if r.get("name") in FEATURED_EXCLUDE:
+        return False
+    if r.get("account") == "open-genomics":
         return False
     if r.get("property") == "original":
         return r.get("resume_level") in ("高", "中")
@@ -284,9 +294,9 @@ def is_featured(r):
 
 
 def featured_sort_key(r):
-    """排序键：open-infra-ai P0（简历主线）→ 其他 org P0 → holtwood 原创；字段序 + 名称兜底。"""
+    """排序键：holtwood-systems P0（简历主线）→ 其他 org P0 → holtwood 原创；字段序 + 名称兜底。"""
     if r["property"] == "org-project":
-        tier = 0 if r["account"] == "open-infra-ai" else 1
+        tier = 0 if r["account"] == "holtwood-systems" else 1
     else:
         tier = 2
     return (tier,
@@ -308,7 +318,7 @@ def render_featured(data):
     """渲染 README 顶部"主要开发项目"精选表格。"""
     repos = [r for r in data["repos"] if is_featured(r)]
     repos.sort(key=featured_sort_key)
-    return render_table(repos, FEATURED_CONFIG)
+    return render_table(repos[:FEATURED_LIMIT], FEATURED_CONFIG)
 
 
 def readme_sections(data, contests):
@@ -324,8 +334,8 @@ SIDEBAR_TITLES = {
     "competitions": "竞赛与赛题",
     "holtwood-owned": "原创（非 Fork）公开仓库盘点",
     "forks-and-translations": "Fork 与 AI 翻译仓库",
-    "organizations": "组织仓库概览与贡献审计",
-    "original-projects": "组织下的原创项目（含贡献者审计）",
+    "organizations": "holtwood-systems 组织概览与贡献审计",
+    "original-projects": "原创系统与公开赛道（含贡献者审计）",
     "ai-infra": "AI Infra 优先级与阅读范围",
     "hpc-and-transferable": "HPC 与可迁移能力项目",
     "tools-and-unrelated": "工具类与非 AI Infra 项目",

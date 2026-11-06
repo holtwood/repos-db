@@ -36,7 +36,7 @@ FIXTURE = {
          "notes": {"original-projects": {"position": "证据", "resume": "辅助"},
                    "hpc-and-transferable": {"signal": "C++23", "usage": "辅助"}}},
         # --- 精选区(render_featured)测试仓库:追加在末尾,不动 repos[0] ---
-        {"name": "ai-infra-interview-prep", "account": "holtwood", "visibility": "public",
+        {"name": "study-plan", "account": "holtwood", "visibility": "public",
          "property": "original", "language": "Markdown", "resume_level": "中",
          "categories": ["holtwood-owned"],
          "notes": {"holtwood-owned": "12 周 AI Infra 转行计划"}},
@@ -44,17 +44,23 @@ FIXTURE = {
          "property": "original", "language": "Markdown", "resume_level": "低",
          "categories": ["holtwood-owned"],
          "notes": {"holtwood-owned": "本仓库"}},
-        {"name": "tiny-llm", "account": "open-infra-ai", "visibility": "public",
+        {"name": "tiny-llm", "account": "holtwood-systems", "visibility": "public",
          "property": "org-project", "language": "C++", "priority": "P0",
          "contributors": "holtwood", "categories": ["original-projects"],
          "notes": {"original-projects": {"position": "CUDA 推理引擎", "resume": "主线"}}},
         {"name": "minibwa-rust", "account": "open-genomics", "visibility": "public",
          "property": "org-project", "language": "Rust", "priority": "P0",
          "categories": ["original-projects"], "notes": {}},
+        {"name": "plain-org", "account": "holtwood-systems", "visibility": "public",
+         "property": "org-project", "language": "Python", "priority": "P0",
+         "contributors": "holtwood", "categories": ["original-projects"], "notes": {}},
+        {"name": "moved-guide", "account": "holtwood-systems", "visibility": "public",
+         "property": "original", "language": "C++", "resume_level": "低",
+         "categories": ["holtwood-owned"], "notes": {"holtwood-owned": "已迁移"}},
         {"name": "cudaimg", "account": "holtwood-projects", "visibility": "public",
          "property": "org-project", "language": "CUDA", "priority": "P2",
          "categories": ["hpc-and-transferable"]},
-        {"name": "some-org-proj", "account": "open-infra-ai", "visibility": "public",
+        {"name": "some-org-proj", "account": "holtwood-systems", "visibility": "public",
          "property": "org-project", "language": "Python", "priority": "P0",
          "contributors": "Lumkai", "categories": ["original-projects"]},
     ],
@@ -117,11 +123,12 @@ REPO_BY_NAME = {r["name"]: r for r in FIXTURE["repos"]}
 
 # T-A. is_featured 门槛：original 需 resume 高/中；org-project 需 P0 且 contributors 缺失或含 holtwood；fork 排除
 expect_featured = {
-    "ai-infra-interview-prep": True,   # original resume 中
+    "study-plan": True,   # original resume 中
     "repos-db": False,             # original resume 低
     "tiny-llm": True,                  # org P0 contributors=holtwood
-    "minibwa-rust": True,              # org P0 无 contributors 字段 → 通过
-    "fq-compressor": True,             # org P0 无 contributors 字段 → 通过
+    "minibwa-rust": False,             # open-genomics 旧主线不进精选
+    "fq-compressor": False,            # open-genomics 旧主线不进精选
+    "plain-org": True,                 # org P0 contributors=holtwood
     "cudaimg": False,                  # org P2
     "some-org-proj": False,            # org P0 但 contributors=Lumkai
     "cuda-samples": False,             # fork
@@ -138,24 +145,31 @@ import re as _re
 names_in_feat = _re.findall(r"\[([^\]]+)\]\(https://github\.com/", feat1)
 check("精选去重", len(names_in_feat) == len(set(names_in_feat)), names_in_feat)
 
-# T-C. 精选排序：open-infra-ai 先于 open-genomics，先于 holtwood
+# T-C. 精选只保留当前主线：holtwood-systems 先于 holtwood；open-genomics 不进精选
 def _row_account(name):
     # 行形如 | [name](https://github.com/acct/name) | lang | acct | tagline |
     line = next(l for l in feat1.splitlines() if f"[{name}](https://github.com/"
                 in l and l.startswith("| ["))
     return line.split("|")[3].strip()
 
-check("精选排序 open-infra-ai 先于 open-genomics",
-      feat1.find("tiny-llm") < feat1.find("fq-compressor"))
-check("精选排序 open-genomics 先于 holtwood",
-      feat1.find("fq-compressor") < feat1.find("ai-infra-interview-prep"))
-check("精选排序 归属列正确", _row_account("tiny-llm") == "open-infra-ai")
+check("精选排除 open-genomics",
+      "fq-compressor" not in feat1 and "minibwa-rust" not in feat1)
+check("精选排序 holtwood-systems 先于 holtwood",
+      feat1.find("tiny-llm") < feat1.find("study-plan"))
+check("精选排序 归属列正确", _row_account("tiny-llm") == "holtwood-systems")
 
 # T-D. 定位回退：无 position notes 的 org P0 仓库定位列渲染为 -
-row = next(l for l in feat1.splitlines() if "minibwa-rust" in l and l.startswith("| ["))
+row = next(l for l in feat1.splitlines() if "plain-org" in l and l.startswith("| ["))
 check("定位回退为 -", "| - |" in row, row)
 
-# T-E. featured 占位符：只换标记内，手工段保留（镜像用例 #1）
+# T-E. holtwood-owned 只列个人号仓库，迁出的仓库不再混入
+owned = generate.repos_for_slug(FIXTURE, "holtwood-owned")
+check("holtwood-owned 仅个人号",
+      all(r["account"] == "holtwood" for r in owned)
+      and any(r["name"] == "study-plan" for r in owned)
+      and not any(r["name"] == "moved-guide" for r in owned))
+
+# T-F. featured 占位符：只换标记内，手工段保留（镜像用例 #1）
 with tempfile.TemporaryDirectory() as td:
     p = Path(td) / "t.md"
     p.write_text("标题\n\n<!-- AUTO:start featured -->\n旧表\n"

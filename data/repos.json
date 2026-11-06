@@ -1,61 +1,44 @@
 {
-  "audited_at": "2026-11-03",
+  "audited_at": "2026-11-06",
   "accounts": {
     "holtwood": {
-      "public": 11,
-      "private": 10,
+      "public": 12,
+      "private": 12,
       "forks": 0,
-      "note": "个人"
+      "note": "个人身份 / 索引 / 私有实验"
     },
-    "open-infra-ai": {
-      "public": 10,
-      "private": 2,
-      "forks": 0,
-      "note": "AI Infra 作品集"
-    },
-    "open-genomics": {
+    "holtwood-systems": {
       "public": 9,
-      "private": 4,
+      "private": 0,
       "forks": 0,
-      "note": "生物信息与 C++ 工程"
+      "note": "AI Infra / HPC 系统"
     },
-    "holtwood-projects": {
-      "public": 23,
-      "private": 1,
+    "holtwood-arena": {
+      "public": 4,
+      "private": 25,
       "forks": 0,
-      "note": "完整可运行的项目与工具"
+      "note": "比赛与 benchmark"
     },
     "holtwood-forks": {
       "public": 32,
       "private": 0,
       "forks": 31,
-      "note": "上游研读副本与自用 fork"
+      "note": "上游研读"
     },
-    "cannjudge": {
-      "public": 1,
-      "private": 17,
+    "holtwood-projects": {
+      "public": 23,
+      "private": 1,
       "forks": 0,
-      "note": "Ascend C 赛事归档"
+      "note": "历史应用与工具 · 维护模式"
+    },
+    "open-genomics": {
+      "public": 9,
+      "private": 4,
+      "forks": 0,
+      "note": "生信旧主线 · 维护模式"
     }
   },
   "repos": [
-    {
-      "name": "ai-infra-interview-prep",
-      "account": "open-infra-ai",
-      "visibility": "private",
-      "property": "original",
-      "language": "Markdown",
-      "domain": "求职规划",
-      "ai_relevance": "高",
-      "resume_level": "中",
-      "categories": [
-        "holtwood-owned"
-      ],
-      "notes": {
-        "holtwood-owned": "12 周 AI Infra 转行计划、能力矩阵、面试执行"
-      },
-      "links_ok": true
-    },
     {
       "name": "repos-db",
       "account": "holtwood",
@@ -94,23 +77,25 @@
     },
     {
       "name": "cpp-high-performance-guide",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "original",
       "language": "C++",
+      "license": "MIT",
+      "contributors": "holtwood",
       "domain": "性能工程",
       "ai_relevance": "中",
       "resume_level": "中",
       "categories": [
-        "holtwood-owned",
+        "organizations",
         "hpc-and-transferable"
       ],
       "notes": {
-        "holtwood-owned": "可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站",
         "hpc-and-transferable": {
           "signal": "C++20 性能工程、SIMD、内存优化、基准测试",
           "usage": "辅助；内容可作面试复习材料"
-        }
+        },
+        "organizations": "可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站"
       },
       "links_ok": true
     },
@@ -124,11 +109,9 @@
       "ai_relevance": "低",
       "resume_level": "低",
       "categories": [
-        "holtwood-owned",
         "hpc-and-transferable"
       ],
       "notes": {
-        "holtwood-owned": "头文件 C++23 位运算库，AVX2，实验性",
         "hpc-and-transferable": {
           "signal": "C++23、AVX2 位运算",
           "usage": "低优先级"
@@ -216,15 +199,20 @@
       "visibility": "public",
       "property": "fork",
       "language": "TypeScript",
+      "domain": "求职工具",
+      "ai_relevance": "高",
+      "resume_level": "中",
       "categories": [
         "forks-and-translations"
       ],
       "notes": {
-        "forks-and-translations": "AI 简历/求职工作台；自用 fork（自 holtwood-projects 归位）"
+        "forks-and-translations": "AI 简历/求职工作台 fork；上游 LingyiChen-AI/JadeAI"
       },
       "links_ok": true,
       "upstream": "LingyiChen-AI/JadeAI",
-      "priority": "无"
+      "priority": "无",
+      "ahead": 147,
+      "behind": 2
     },
     {
       "name": "cuda-samples",
@@ -233,7 +221,7 @@
       "property": "fork",
       "upstream": "NVIDIA/cuda-samples",
       "ahead": 26,
-      "behind": 1,
+      "behind": 2,
       "language": "C++",
       "priority": "P1",
       "categories": [
@@ -359,7 +347,7 @@
       "property": "fork",
       "upstream": "Dao-AILab/flash-attention",
       "ahead": 2,
-      "behind": 76,
+      "behind": 79,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -377,7 +365,7 @@
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 2487,
+      "behind": 2869,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -395,7 +383,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 4774,
+      "behind": 5091,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -413,7 +401,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 5366,
+      "behind": 5571,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -431,7 +419,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 2392,
+      "behind": 2491,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -449,7 +437,7 @@
       "property": "fork",
       "upstream": "triton-lang/triton",
       "ahead": 0,
-      "behind": 671,
+      "behind": 696,
       "language": "MLIR",
       "priority": "P2",
       "categories": [
@@ -467,7 +455,7 @@
       "property": "fork",
       "upstream": "apache/tvm",
       "ahead": 1,
-      "behind": 429,
+      "behind": 430,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -485,7 +473,7 @@
       "property": "fork",
       "upstream": "ModelTC/LightLLM",
       "ahead": 12,
-      "behind": 111,
+      "behind": 116,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -539,7 +527,7 @@
       "property": "fork",
       "upstream": "tylerelyt/LLM-Workshop",
       "ahead": 8,
-      "behind": 1,
+      "behind": 0,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -593,7 +581,7 @@
       "property": "fork",
       "upstream": "open-mpi/ompi",
       "ahead": 13,
-      "behind": 425,
+      "behind": 454,
       "language": "C",
       "priority": "P3",
       "categories": [
@@ -615,8 +603,8 @@
       "visibility": "public",
       "property": "fork",
       "upstream": "ArcSurge/Termius-Pro-zh_CN",
-      "ahead": 11,
-      "behind": 5,
+      "ahead": 14,
+      "behind": 9,
       "language": "Python",
       "priority": "无",
       "categories": [
@@ -648,8 +636,8 @@
       "behind": 3
     },
     {
-      "name": "open-infra-ai",
-      "account": "open-infra-ai",
+      "name": "portfolio",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "Markdown",
@@ -661,9 +649,9 @@
         "original-projects"
       ],
       "notes": {
-        "organizations": "五仓作品集 landing 页与计划/面试材料唯一权威源",
+        "organizations": "系统作品集入口：学习路径、跨仓契约、证据索引与当前缺口",
         "original-projects": {
-          "position": "五仓 landing 页、计划与面试证据包唯一权威源",
+          "position": "holtwood-systems 的系统作品集入口：CUDA/Triton、推理运行时、Serving 与证据导航",
           "resume": "讲述入口"
         }
       },
@@ -671,7 +659,7 @@
     },
     {
       "name": "cuda-foundations",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "C++",
@@ -693,7 +681,7 @@
     },
     {
       "name": "trifuse",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "Python",
@@ -715,7 +703,7 @@
     },
     {
       "name": "cuflash",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "CUDA",
@@ -737,7 +725,7 @@
     },
     {
       "name": "tiny-llm",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "C++",
@@ -751,7 +739,7 @@
       "notes": {
         "organizations": "L4：CUDA 原生 C++ 推理引擎（GGUF/W8A16/分页 KV）",
         "original-projects": {
-          "position": "CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV 策略 1；TPOT ≈ 6.1 ms/token（本机实测，RTX 3060 Laptop）；170 tests",
+          "position": "CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV；性能数字以仓库当前报告为准",
           "resume": "推理系统主项目"
         }
       },
@@ -759,7 +747,7 @@
     },
     {
       "name": "paged-serving",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "Rust",
@@ -781,7 +769,7 @@
     },
     {
       "name": ".github",
-      "account": "open-infra-ai",
+      "account": "holtwood-systems",
       "visibility": "public",
       "property": "org-project",
       "language": "",
@@ -1055,7 +1043,7 @@
       "language": "Go",
       "priority": "无",
       "ahead": 0,
-      "behind": 126
+      "behind": 149
     },
     {
       "name": "fruit-ninja-dojo",
@@ -1165,24 +1153,65 @@
       "links_ok": true
     },
     {
-      "name": "race",
-      "account": "holtwood",
+      "name": "kvtier",
+      "account": "holtwood-systems",
       "visibility": "public",
-      "property": "original",
-      "language": "Shell",
-      "domain": "性能工程",
-      "ai_relevance": "中",
-      "resume_level": "中",
+      "property": "org-project",
+      "language": "Python",
+      "license": "",
+      "contributors": "holtwood",
+      "priority": "P1",
       "categories": [
-        "holtwood-owned",
+        "organizations",
+        "original-projects",
         "hpc-and-transferable"
       ],
       "notes": {
-        "holtwood-owned": "性能工程竞赛实验室：Speed Demon/1BRC/PPC/DIMACS/AHC 练习与成绩台账",
+        "organizations": "主动研究：SGLang HiCache / vLLM KV offloading 的分层复现",
+        "original-projects": {
+          "position": "KV Cache 分层研究：单卡 L2 微基准与上游 HiCache 贡献",
+          "resume": "系统研究项目"
+        },
         "hpc-and-transferable": {
-          "signal": "CPU 侧性能工程：解析、内存布局、并行与测量方法",
-          "usage": "可迁移能力"
+          "signal": "memory hierarchy / KV tiering / 结果包审计",
+          "usage": "P1"
         }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "ai-infra-serving-study-plan",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "language": "Markdown",
+      "domain": "学习计划",
+      "ai_relevance": "高",
+      "resume_level": "中",
+      "categories": [
+        "holtwood-owned"
+      ],
+      "notes": {
+        "holtwood-owned": "AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine"
+      },
+      "links_ok": true
+    },
+    {
+      "name": "ai-infra-radar",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "original",
+      "language": "Python",
+      "domain": "贡献雷达",
+      "ai_relevance": "中",
+      "resume_level": "低",
+      "categories": [
+        "holtwood-owned",
+        "tools-and-unrelated"
+      ],
+      "notes": {
+        "holtwood-owned": "AI Infra 上游 issue/discussion 发现与 triage 工具",
+        "tools-and-unrelated": "上游贡献雷达"
       },
       "links_ok": true
     },
@@ -1193,39 +1222,167 @@
       "property": "original",
       "language": "TypeScript",
       "domain": "开发者工具",
-      "ai_relevance": "中",
-      "resume_level": "中",
+      "ai_relevance": "低",
+      "resume_level": "低",
       "categories": [
         "holtwood-owned",
         "tools-and-unrelated"
       ],
       "notes": {
-        "holtwood-owned": "cmdc 状态栏插件：模型/上下文/缓存命中/成本，多语言文档与文档站",
-        "tools-and-unrelated": "CLI 状态栏工具"
+        "holtwood-owned": "Command Code 状态栏：模型、上下文、成本、git 状态",
+        "tools-and-unrelated": "Command Code 状态栏"
+      },
+      "links_ok": true
+    },
+    {
+      "name": "race",
+      "account": "holtwood-arena",
+      "visibility": "public",
+      "property": "org-project",
+      "language": "Python",
+      "license": "",
+      "contributors": "holtwood",
+      "priority": "P0",
+      "categories": [
+        "original-projects",
+        "hpc-and-transferable"
+      ],
+      "notes": {
+        "original-projects": {
+          "position": "性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据",
+          "resume": "性能工程公开信号"
+        },
+        "hpc-and-transferable": {
+          "signal": "性能工程方法论、单变量实验与证据记录",
+          "usage": "P0 公开信号"
+        }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "kunpeng-s2-conv",
+      "account": "holtwood-arena",
+      "visibility": "public",
+      "property": "org-project",
+      "language": "C",
+      "license": "",
+      "contributors": "holtwood",
+      "priority": "P1",
+      "categories": [
+        "original-projects",
+        "hpc-and-transferable"
+      ],
+      "notes": {
+        "original-projects": {
+          "position": "Kunpeng S2 FP32 2D convolution 优化：x86 本地 ×17–21.6；鲲鹏平台未复测",
+          "resume": "HPC 辅助"
+        },
+        "hpc-and-transferable": {
+          "signal": "SIMD、访存分块、单变量归因",
+          "usage": "P1 辅助"
+        }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "kunpeng-s3-openfoam",
+      "account": "holtwood-arena",
+      "visibility": "public",
+      "property": "org-project",
+      "language": "C",
+      "license": "",
+      "contributors": "holtwood",
+      "priority": "P2",
+      "categories": [
+        "original-projects",
+        "hpc-and-transferable"
+      ],
+      "notes": {
+        "original-projects": {
+          "position": "OpenFOAM v2606 simpleFoam 静态研究；未参赛、未上机，已归档",
+          "resume": "HPC 调研样本"
+        },
+        "hpc-and-transferable": {
+          "signal": "应用级 HPC 调研、可修改范围与 A/B 协议",
+          "usage": "P2"
+        }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "cloud-bench",
+      "account": "holtwood-projects",
+      "visibility": "public",
+      "property": "org-project",
+      "language": "Shell",
+      "priority": "P2",
+      "categories": [
+        "hpc-and-transferable"
+      ],
+      "notes": {
+        "hpc-and-transferable": {
+          "signal": "云服务器 p99 长尾、%steal 超售检测、指令集检查",
+          "usage": "辅助"
+        }
       },
       "links_ok": true
     }
   ],
   "retired": [
     {
-      "old": "holtwood/sgemm-optimization",
-      "status": "404",
-      "note": "主页移除展示；SGEMM 主题由 SGEMM_CUDA（Fork+中文注释）与 open-infra-ai/cuda-foundations 覆盖"
+      "old": "open-infra-ai",
+      "status": "renamed",
+      "note": "组织改名 → holtwood-systems；组织根 404，仓库级 301"
     },
     {
-      "old": "holtwood/the-art-of-hpc-zh",
-      "status": "404",
-      "note": "主页移除展示（HPC 教材中文翻译，已放弃）"
+      "old": "cannjudge",
+      "status": "renamed",
+      "note": "组织改名 → holtwood-arena；组织根 404，仓库级 301"
     },
     {
-      "old": "holtwood/cursor-rules",
-      "status": "404",
-      "note": "主页移除展示"
+      "old": "open-infra-ai/open-infra-ai",
+      "status": "renamed",
+      "note": "→ holtwood-systems/portfolio"
     },
     {
-      "old": "holtwood/awesome-claude-skills-zh",
-      "status": "404",
-      "note": "主页移除展示"
+      "old": "holtwood/race",
+      "status": "transferred",
+      "note": "→ holtwood-arena/race"
+    },
+    {
+      "old": "holtwood/flagos-s2-*",
+      "status": "transferred",
+      "note": "→ holtwood-arena/flagos-s2-*"
+    },
+    {
+      "old": "holtwood/kunpeng-*",
+      "status": "transferred",
+      "note": "→ holtwood-arena/kunpeng-*"
+    },
+    {
+      "old": "holtwood/muse-spark-*",
+      "status": "transferred",
+      "note": "→ holtwood-arena/muse-spark-*"
+    },
+    {
+      "old": "holtwood/ai-infra-serving",
+      "status": "renamed",
+      "note": "→ holtwood/ai-infra-serving-study-plan"
+    },
+    {
+      "old": "holtwood-projects/JadeAI",
+      "status": "transferred",
+      "note": "→ holtwood-forks/JadeAI"
+    },
+    {
+      "old": "open-infra-ai/ai-infra-radar",
+      "status": "transferred",
+      "note": "→ holtwood/ai-infra-radar"
+    },
+    {
+      "old": "cannjudge（私有赛事工具与赛题仓）",
+      "status": "migrated",
+      "note": "已统一迁入 holtwood-arena；私有，不在公开文档中列举具体仓库名"
     }
   ]
 }

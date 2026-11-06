@@ -14,7 +14,7 @@
 |---|---|
 | 平台 | [CANNJudge 昇腾算子判题平台](https://cannjudge.cn) |
 | 赛期 | 2026-09-20 ~ 2026-11-06 |
-| 状态 | 进行中 |
+| 状态 | 已结束 |
 | 评测环境 | CANN 9.0.0 · Ascend 910B |
 | 题面页 | [https://cannjudge.cn/public/2026_electronic](https://cannjudge.cn/public/2026_electronic) |
 
@@ -39,13 +39,16 @@
 |---|---|
 | 平台 | [CANNJudge 昇腾算子判题平台](https://cannjudge.cn) |
 | 赛期 | 2026-10 |
-| 状态 | 进行中 |
+| 状态 | 已结束 |
 | 评测环境 | CANN 9.0.0 · Ascend 910B |
 | 题面页 | - |
 
 | 题号 | 题目 | problem_id | 难度 |
 |---|---|---|---|
-| 01 | 转置卷积算子 ConvTranspose2D | - | - |
+| 01 | [共享操作数双路乘法与归约融合算子 ConfusionMulGrad](https://cannjudge.cn/public/ladder_october/confusionmulgrad) | - | - |
+| 02 | [转置卷积算子 ConvTranspose2D](https://cannjudge.cn/public/ladder_october/convtranspose2d) | - | - |
+| 03 | [FlashAttention 注意力算子](https://cannjudge.cn/public/ladder_october/flashattention) | - | - |
+| 04 | [MhcSinkhornGrad 反向算子](https://cannjudge.cn/public/ladder_october/mhcsinkhorngrad) | - | - |
 <!-- AUTO:end contest-cannjudge-2026-10-ladder -->
 
 ## 2026 CANN 挑战赛西北赛区初赛
@@ -55,7 +58,7 @@
 |---|---|
 | 平台 | CANN 挑战赛 |
 | 赛期 | 2026 |
-| 状态 | 进行中 |
+| 状态 | 已归档 |
 | 评测环境 | CANN 9.0.0 · Ascend 910B |
 | 题面页 | - |
 
