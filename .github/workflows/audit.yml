@@ -38,6 +38,10 @@ jobs:
             --changelog "数据快照更新（$(date +%Y-%m-%d)）：ahead/behind 与链接状态已刷新"
 
       - name: Open PR if changed
+        env:
+          # PR 创建只用仓库级 token；跨账号读取仍由作业级 AUDIT_TOKEN 负责。
+          # 避免 PAT 缺少 GraphQL/PR 权限时，审计成功的分支卡在 401。
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if git diff --quiet; then
             echo "no changes"
