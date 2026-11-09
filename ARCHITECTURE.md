@@ -62,8 +62,23 @@
 ## 6. 命名规则
 
 - 组织一律 `holtwood-<域>`，全部小写连字符；不接受不带前缀的组织名（会读成社区项目，也会从命名空间里漏出去）。
-- 仓库用 `<品牌slug>`，全小写连字符；**类型写进 description / topics，不写进名字**（例外：`-minigame` 这类确实用于消歧的后缀）。
+- 仓库用 `<品牌slug>`，全小写；多词用连字符，单 token 品牌名不加连字符（`bitcal`、`utop`、`wb2api`、`recipegrid`、`cudaimg`）；**类型写进 description / topics，不写进名字**（例外：`-minigame` 这类确实用于消歧的后缀）。
 - 已存在的历史命名不为了整齐而批量重命名；只在下次自然触碰该仓库时按本规则改。
+
+### 为什么 `repos-db` / `stars-db` 不改名
+
+`-db` 后缀在本账号里表示「**结构化数据 + 生成视图**的索引层」：`data/*.json` 是事实源，
+`scripts/generate.py` 渲染成页面，Pages 提供站点。它和作品集仓库是两个物种，名字要能区分。
+
+评估过改成 `repo-map` / `star-map` 一类，结论是**不改**，理由是可验证的：
+
+- GitHub 官方文档（Renaming a repository）：改名时"除 **project site URLs** 外"全部自动重定向。
+  也就是说 `holtwood.github.io/repos-db/` 与 `/stars-db/` 会直接 404，唯一解法是绑自定义域名。
+- 两者互相引用，并被 `holtwood`、`holtwood-systems/portfolio`、`holtwood-arena/*`、
+  `holtwood-projects.github.io` 共 40+ 处引用。改名收益是审美，成本是断链加书签失效。
+
+**将来若真要改**：先给两个站点绑自定义域名（例如 `map.imshane.site`），URL 与仓库名解耦后再改名；
+或改名后用同名仓库放跳转页。在此之前保持原名，不要每次评审重新讨论一遍。
 
 ## 7. 可见性与索引
 

@@ -7,6 +7,10 @@
 > 都是按层切分的**视图**，与本文冲突时以本文为准。
 > 面向访客的精选入口是 **[imshane.site/projects](https://imshane.site/projects)**。
 
+> 仓库名中的 `db` 指「结构化数据（`data/repos.json`）+ 生成视图」，不是数据库服务；
+> 同一命名族的索引还有 `stars-db`、`repos-db-private`。为什么保留这个名字见
+> [ARCHITECTURE.md §6](ARCHITECTURE.md)。
+
 审计日期与总量以下方徽章为准（由 `scripts/audit.py` 刷新，方法见 [methodology.md](methodology.md)）。
 
 <!-- AUTO:start badges -->
