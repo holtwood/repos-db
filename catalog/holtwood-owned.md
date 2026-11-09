@@ -8,7 +8,6 @@
 |---|---|---|---|---|---|
 | [repos-db](https://github.com/holtwood/repos-db) | Markdown | 仓库导航 | 中 | 低 | 本仓库：全部仓库盘点与 deep-dives |
 | [stars-db](https://github.com/holtwood/stars-db) | Python | 资源索引 | 低 | 低 | 1300+ Star 项目分类索引 |
-| [tensortonic-solutions](https://github.com/holtwood/tensortonic-solutions) | Python | 练习解答 | 中 | 低 | TensorTonic 题解 |
 | [awesome-cursorrules-zh](https://github.com/holtwood/awesome-cursorrules-zh) | JavaScript | 工具资源 | 无 | 低 | Cursor 规则中文精选（AI 翻译/整理性质） |
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | CSS | 博客 | 无 | 低 | 个人博客站点 |
 | [holtwood](https://github.com/holtwood/holtwood) | Markdown | 个人主页 | 低 | 中 | Profile 展示页 |
@@ -16,7 +15,6 @@
 | [imshane-site](https://github.com/holtwood/imshane-site) | Astro | 个人站点 | 无 | 无 | 「简说笔记」个人站点（Astro Nano） |
 | [.github](https://github.com/holtwood/.github) | - | 账号配置 | 无 | 无 | 账号级社区健康文件与 Issue/PR 模板 |
 | [ai-infra-serving-study-plan](https://github.com/holtwood/ai-infra-serving-study-plan) | Markdown | 学习计划 | 高 | 中 | AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine |
-| [ascend-llm-infra-lab](https://github.com/holtwood/ascend-llm-infra-lab) | Python | AI Infra 实验 | 高 | 高 | Ascend 910B2 vLLM serving 实验体系：50+ 可复现实验（KV 账本、goodput/SLO、调度消融、量化、多副本扩展） |
 | [ai-infra-radar](https://github.com/holtwood/ai-infra-radar) | Python | 贡献雷达 | 中 | 低 | AI Infra 上游 issue/discussion 发现与 triage 工具 |
 | [cmdc-statusline](https://github.com/holtwood/cmdc-statusline) | TypeScript | 开发者工具 | 低 | 低 | Command Code 状态栏：模型、上下文、成本、git 状态 |
 <!-- AUTO:end holtwood-owned -->

@@ -5,6 +5,7 @@
 ## [2026-11-06]
 
 ### Changed
+- 架构收敛（2026-11-09）：gpumode-vectorsum / tensortonic-solutions 迁入 holtwood-arena，ascend-llm-infra-lab 迁入 holtwood-systems；私有仓库移出公开目录；账号统计改为由 total-public 推导；新增 ARCHITECTURE.md 决策记录
 - 仓库导航按新组织架构重排：`holtwood`（个人主品牌）、`holtwood-systems`（AI Infra / HPC）、
   `holtwood-arena`（比赛与 benchmark）、`holtwood-forks`（上游研读）、`holtwood-projects`
   （历史应用）、`open-genomics`（生信旧主线，维护模式）。

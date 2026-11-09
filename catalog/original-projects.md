@@ -14,6 +14,7 @@
 <!-- AUTO:start original-projects -->
 | 项目 | 归属 | 定位与证据 | 简历用法 |
 |---|---|---|---|
+| [tensortonic-solutions](https://github.com/holtwood-arena/tensortonic-solutions) | holtwood-arena | TensorTonic 题解记录：按题整理的可运行解答 | 低（练习记录，不作作品集主线） |
 | [portfolio](https://github.com/holtwood-systems/portfolio) | holtwood-systems | holtwood-systems 的系统作品集入口：CUDA/Triton、推理运行时、Serving 与证据导航 | 讲述入口 |
 | [cuda-foundations](https://github.com/holtwood-systems/cuda-foundations) | holtwood-systems | CUDA 算子工程学习路径，SGEMM 到可复用推理组件（原 cuda-kernel-academy） | Kernel 主项目之一 |
 | [trifuse](https://github.com/holtwood-systems/trifuse) | holtwood-systems | Triton 算子库（RMSNorm+RoPE/SwiGLU/FlashAttention/SGEMM）+ torch.library 注册 | Kernel 主项目之一 |
@@ -24,6 +25,7 @@
 | [race](https://github.com/holtwood-arena/race) | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 | 性能工程公开信号 |
 | [kunpeng-s2-conv](https://github.com/holtwood-arena/kunpeng-s2-conv) | holtwood-arena | Kunpeng S2 FP32 2D convolution 优化：x86 本地 ×17–21.6；鲲鹏平台未复测 | HPC 辅助 |
 | [kunpeng-s3-openfoam](https://github.com/holtwood-arena/kunpeng-s3-openfoam) | holtwood-arena | OpenFOAM v2606 simpleFoam 静态研究；未参赛、未上机，已归档 | HPC 调研样本 |
+| [gpumode-vectorsum](https://github.com/holtwood-arena/gpumode-vectorsum) | holtwood-arena | GPU MODE PMP_v2 vectorsum_v2：A100 141.865 μs，榜单 43/120；Triton 两阶段归约 | 中（有公开榜单与硬件绑定的性能数字） |
 <!-- AUTO:end original-projects -->
 
 性能数字的硬件/版本/命令口径见各仓 README 与

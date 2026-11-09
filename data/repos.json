@@ -1,21 +1,21 @@
 {
-  "audited_at": "2026-11-06",
+  "audited_at": "2026-11-09",
   "accounts": {
     "holtwood": {
-      "public": 13,
-      "private": 12,
+      "public": 11,
+      "private": 14,
       "forks": 0,
       "note": "个人身份 / 索引 / 私有实验"
     },
     "holtwood-systems": {
-      "public": 10,
-      "private": 0,
+      "public": 9,
+      "private": 3,
       "forks": 0,
       "note": "AI Infra / HPC 系统"
     },
     "holtwood-arena": {
-      "public": 4,
-      "private": 25,
+      "public": 6,
+      "private": 29,
       "forks": 0,
       "note": "比赛与 benchmark"
     },
@@ -121,7 +121,7 @@
     },
     {
       "name": "tensortonic-solutions",
-      "account": "holtwood",
+      "account": "holtwood-arena",
       "visibility": "public",
       "property": "original",
       "language": "Python",
@@ -129,12 +129,13 @@
       "ai_relevance": "中",
       "resume_level": "低",
       "categories": [
-        "holtwood-owned",
-        "tools-and-unrelated"
+        "original-projects"
       ],
       "notes": {
-        "holtwood-owned": "TensorTonic 题解",
-        "tools-and-unrelated": "TensorTonic 题解"
+        "original-projects": {
+          "position": "TensorTonic 题解记录：按题整理的可运行解答",
+          "resume": "低（练习记录，不作作品集主线）"
+        }
       },
       "links_ok": true
     },
@@ -347,7 +348,7 @@
       "property": "fork",
       "upstream": "Dao-AILab/flash-attention",
       "ahead": 2,
-      "behind": 79,
+      "behind": 89,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -365,7 +366,7 @@
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 2869,
+      "behind": 3142,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -383,7 +384,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 5091,
+      "behind": 5290,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -401,7 +402,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 5571,
+      "behind": 5831,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -419,7 +420,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 2491,
+      "behind": 2566,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -437,7 +438,7 @@
       "property": "fork",
       "upstream": "triton-lang/triton",
       "ahead": 0,
-      "behind": 696,
+      "behind": 717,
       "language": "MLIR",
       "priority": "P2",
       "categories": [
@@ -455,7 +456,7 @@
       "property": "fork",
       "upstream": "apache/tvm",
       "ahead": 1,
-      "behind": 430,
+      "behind": 432,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -473,7 +474,7 @@
       "property": "fork",
       "upstream": "ModelTC/LightLLM",
       "ahead": 12,
-      "behind": 116,
+      "behind": 118,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -581,7 +582,7 @@
       "property": "fork",
       "upstream": "open-mpi/ompi",
       "ahead": 13,
-      "behind": 454,
+      "behind": 463,
       "language": "C",
       "priority": "P3",
       "categories": [
@@ -603,8 +604,8 @@
       "visibility": "public",
       "property": "fork",
       "upstream": "ArcSurge/Termius-Pro-zh_CN",
-      "ahead": 14,
-      "behind": 9,
+      "ahead": 18,
+      "behind": 10,
       "language": "Python",
       "priority": "无",
       "categories": [
@@ -785,7 +786,7 @@
     {
       "name": "open-infra-ai",
       "account": "holtwood-systems",
-      "visibility": "public",
+      "visibility": "private",
       "property": "org-project",
       "language": "TypeScript",
       "domain": "归档旧名",
@@ -1060,7 +1061,7 @@
       "language": "Go",
       "priority": "无",
       "ahead": 0,
-      "behind": 149
+      "behind": 191
     },
     {
       "name": "fruit-ninja-dojo",
@@ -1215,20 +1216,17 @@
     },
     {
       "name": "ascend-llm-infra-lab",
-      "account": "holtwood",
-      "visibility": "public",
-      "property": "original",
+      "account": "holtwood-systems",
+      "visibility": "private",
+      "property": "org-project",
       "language": "Python",
       "domain": "AI Infra 实验",
       "ai_relevance": "高",
       "resume_level": "高",
-      "categories": [
-        "holtwood-owned"
-      ],
-      "notes": {
-        "holtwood-owned": "Ascend 910B2 vLLM serving 实验体系：50+ 可复现实验（KV 账本、goodput/SLO、调度消融、量化、多副本扩展）"
-      },
-      "links_ok": true
+      "categories": [],
+      "notes": {},
+      "links_ok": true,
+      "private_note": "私有实验仓库；公开目录不列举私有仓库名称与描述（见 methodology.md 约束）"
     },
     {
       "name": "ai-infra-radar",
@@ -1357,6 +1355,23 @@
         "hpc-and-transferable": {
           "signal": "云服务器 p99 长尾、%steal 超售检测、指令集检查",
           "usage": "辅助"
+        }
+      },
+      "links_ok": true
+    },
+    {
+      "name": "gpumode-vectorsum",
+      "account": "holtwood-arena",
+      "visibility": "public",
+      "property": "original",
+      "language": "Python",
+      "categories": [
+        "original-projects"
+      ],
+      "notes": {
+        "original-projects": {
+          "position": "GPU MODE PMP_v2 vectorsum_v2：A100 141.865 μs，榜单 43/120；Triton 两阶段归约",
+          "resume": "中（有公开榜单与硬件绑定的性能数字）"
         }
       },
       "links_ok": true

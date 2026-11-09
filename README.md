@@ -1,26 +1,30 @@
 # 🗺️ GitHub Repos Hub — holtwood 项目导航
 
-> 这是项目导航层，不是简历正文。当前主线在 [holtwood-systems](https://github.com/holtwood-systems)，
-> 比赛与 benchmark 在 [holtwood-arena](https://github.com/holtwood-arena)，
-> 上游研读在 [holtwood-forks](https://github.com/holtwood-forks)。
+> **本仓库是所有索引层中的唯一权威地图。** 账号职责、仓库归属、竞赛台账与迁移记录以这里为准；
+> 其余索引页（[portfolio](https://github.com/holtwood-systems/portfolio)、
+> [arena-index](https://github.com/holtwood-arena/arena-index)、
+> [holtwood-projects.github.io](https://holtwood-projects.github.io)、各组织的 `.github` Profile）
+> 都是按层切分的**视图**，与本文冲突时以本文为准。
 > 面向访客的精选入口是 **[imshane.site/projects](https://imshane.site/projects)**。
 
-**最近审计日期：2026-11-06**（基于 GitHub API 实时数据，方法见 [methodology.md](methodology.md)）
+审计日期与总量以下方徽章为准（由 `scripts/audit.py` 刷新，方法见 [methodology.md](methodology.md)）。
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--11--06-4c9) ![仓库总数](https://img.shields.io/badge/仓库-133-4c9) ![公开](https://img.shields.io/badge/公开-91-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--09-4c9) ![仓库总数](https://img.shields.io/badge/仓库-141-4c9) ![公开](https://img.shields.io/badge/公开-90-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## 🧭 架构
 
-| 层级 | 账号 / 组织 | 职责 |
-|------|-------------|------|
-| 个人主品牌 | [holtwood](https://github.com/holtwood) | Profile、索引、私有实验、个人站点与通用工具 |
-| 原创系统 | [holtwood-systems](https://github.com/holtwood-systems) | CUDA/Triton 算子、推理运行时、Serving 控制面与可复现证据 |
-| 比赛与 benchmark | [holtwood-arena](https://github.com/holtwood-arena) | CANN / FlagOS / Kunpeng / Muse 工作区，以及公开的 `race` 实验室 |
-| 上游研读 | [holtwood-forks](https://github.com/holtwood-forks) | 上游源码阅读副本；不主张原创，不进入作品集计数 |
-| 历史应用 | [holtwood-projects](https://github.com/holtwood-projects) | 可运行的应用与工具项目，维护模式 |
-| 生信旧主线 | [open-genomics](https://github.com/open-genomics) | 生物信息与 C++/Rust 系统软件，维护模式 |
+| 层级 | 账号 / 组织 | 状态 | 职责 |
+|------|-------------|------|------|
+| 个人主品牌 | [holtwood](https://github.com/holtwood) | 活跃 | Profile、索引、开发环境、个人站点与个人产品（小程序等） |
+| 原创系统 | [holtwood-systems](https://github.com/holtwood-systems) | 活跃 | CUDA/Triton 算子、推理运行时、Serving 控制面与可复现证据 |
+| 比赛与 benchmark | [holtwood-arena](https://github.com/holtwood-arena) | 活跃 | CANN / FlagOS / Kunpeng / Muse 工作区、题解记录与公开 `race` 实验室 |
+| 上游研读 | [holtwood-forks](https://github.com/holtwood-forks) | 常驻 | 上游源码阅读副本与本地补丁分支；不主张原创，不进入作品集计数 |
+| 历史应用 | [holtwood-projects](https://github.com/holtwood-projects) | 归档维护 | 可运行的应用与工具项目，只做必要修复 |
+| 生信旧主线 | [open-genomics](https://github.com/open-genomics) | 归档维护 | 生物信息与 C++/Rust 系统软件，只做必要修复 |
+
+归属判据、晋升规则、补丁规则、归档条件与命名规则见 **[ARCHITECTURE.md](ARCHITECTURE.md)**。
 
 ## ⭐ 主要项目精选
 
@@ -34,7 +38,6 @@
 | [tiny-llm](https://github.com/holtwood-systems/tiny-llm) | C++ | holtwood-systems | CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV；性能数字以仓库当前报告为准 |
 | [trifuse](https://github.com/holtwood-systems/trifuse) | Python | holtwood-systems | Triton 算子库（RMSNorm+RoPE/SwiGLU/FlashAttention/SGEMM）+ torch.library 注册 |
 | [race](https://github.com/holtwood-arena/race) | Python | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 |
-| [ascend-llm-infra-lab](https://github.com/holtwood/ascend-llm-infra-lab) | Python | holtwood | Ascend 910B2 vLLM serving 实验体系：50+ 可复现实验（KV 账本、goodput/SLO、调度消融、量化、多副本扩展） |
 | [ai-infra-serving-study-plan](https://github.com/holtwood/ai-infra-serving-study-plan) | Markdown | holtwood | AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine |
 | [cpp-high-performance-guide](https://github.com/holtwood-systems/cpp-high-performance-guide) | C++ | holtwood-systems | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
 <!-- AUTO:end featured -->
@@ -78,15 +81,15 @@
 <!-- AUTO:start accounts -->
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
-| holtwood（个人身份 / 索引 / 私有实验） | 25 | 13 | 12 | 0 |
-| holtwood-systems（AI Infra / HPC 系统） | 10 | 10 | 0 | 0 |
-| holtwood-arena（比赛与 benchmark） | 29 | 4 | 25 | 0 |
+| holtwood（个人身份 / 索引 / 私有实验） | 25 | 11 | 14 | 0 |
+| holtwood-systems（AI Infra / HPC 系统） | 12 | 9 | 3 | 0 |
+| holtwood-arena（比赛与 benchmark） | 35 | 6 | 29 | 0 |
 | holtwood-forks（上游研读） | 32 | 32 | 0 | 31 |
 | holtwood-projects（历史应用与工具 · 维护模式） | 24 | 23 | 1 | 0 |
 | open-genomics（生信旧主线 · 维护模式） | 13 | 9 | 4 | 0 |
 <!-- AUTO:end accounts -->
 
-> 口径：账号概览是 2026-11-06 的全量快照（含私有数量，不列私有名称）；下方分类表是
+> 口径：账号概览是徽章所示审计日的全量快照（私有仅计数量，不列名称）；下方分类表是
 > **主题索引**，收录全部 Fork、当前主线、公开赛道与历史代表作，不追求逐仓穷举。
 > 未进入索引的公开仓库不代表不存在。`holtwood/lsix` 因 DMCA 下架（接口返回 451），
 > 不计入公开仓库计数，仅在盘点中保留记录。
@@ -105,6 +108,7 @@ catalog/
   tools-and-unrelated.md    # 工具类与非 AI Infra 项目
   retired-and-migrated.md   # 已删除/已迁移仓库与失效链接
 deep-dives/                 # 上游仓库深读笔记
+ARCHITECTURE.md             # 分层决策记录：放置判据、晋升、补丁、归档、命名
 methodology.md              # 审计方法与字段定义
 CHANGELOG.md
 ```
@@ -118,6 +122,8 @@ CHANGELOG.md
 - 查**失效/迁移链接** → [catalog/retired-and-migrated.md](catalog/retired-and-migrated.md)
 
 ## 职责边界
+
+以下页面都是**视图层**，不各自维护独立的仓库清单；条目归属以本仓库的「架构」表与 `data/repos.json` 为准。
 
 | 仓库 | 职责 |
 |------|------|

@@ -37,3 +37,19 @@
 - Fork 与上游研读内容不标为个人原创。
 - 组织仓库只有通过 contributors 审计确认个人主导后，才在简历语境中表述为个人项目。
 - ahead/behind 与链接状态均为审计日快照，随时间漂移；引用时注明日期。
+
+## 运维：索引凭据轮换
+
+索引层的准确性依赖两个用户级 PAT（`GITHUB_TOKEN` 无法跨账号读仓库，也无法读 Star Lists）：
+
+| 仓库 | Secret | 失效表现 |
+|---|---|---|
+| `holtwood/repos-db` | `AUDIT_TOKEN` | `Run audit` 步骤报 `Bad credentials (HTTP 401)`，数据不再刷新 |
+| `holtwood/stars-db` | `STARS_TOKEN` | `Fetch stars` 步骤报 `Bad credentials (HTTP 401)` |
+
+**PAT 会过期，而过期不会有人通知你——索引只会静默变旧。** 因此：
+
+1. 建立 PAT 后记录到期日，到期前轮换，不要把到期日放在脑子里；
+2. 轮换后在 Actions 页面手动触发一次 workflow；
+3. 确认徽章里的「审计」日期前进到当天，才算轮换完成；
+4. 若 `data/repos.json` 的 `audited_at` 落后于今天超过 8 天，按"索引已失效"处理，先修凭据再引用任何数字。

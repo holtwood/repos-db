@@ -107,7 +107,8 @@ def main():
         forks = sum(1 for r in repos if r.get("isFork"))
         old = data["accounts"].get(acct, {})
         old_stats = {k: old.get(k) for k in ("public", "private", "forks")}
-        new_stats = {"public": public, "private": old.get("private", 0),
+        # private 由 total-public 推导：此前为人工维护，迁移仓库后会静默漂移。
+        new_stats = {"public": public, "private": len(repos) - public,
                      "forks": forks, "note": old.get("note", "")}
         if old_stats != {k: new_stats[k] for k in ("public", "private", "forks")}:
             changes.append(f"accounts.{acct}: public/forks "
