@@ -62,7 +62,23 @@
 ## 6. 命名规则
 
 - 组织一律 `holtwood-<域>`，全部小写连字符；不接受不带前缀的组织名（会读成社区项目，也会从命名空间里漏出去）。
-- 仓库用 `<品牌slug>`，全小写；多词用连字符，单 token 品牌名不加连字符（`bitcal`、`utop`、`wb2api`、`recipegrid`、`cudaimg`）；**类型写进 description / topics，不写进名字**（例外：`-minigame` 这类确实用于消歧的后缀）。
+- 仓库名 = **主体 + 可选类型后缀**，全小写；多词用连字符，单 token 品牌名不加连字符（`bitcal`、`utop`、`wb2api`、`recipegrid`、`cudaimg`）。
+- 类型后缀**允许且鼓励**，但必须一个词、能消歧。现行约定（由 141 个存量仓库归纳，不是臆造）：
+
+| 后缀 | 用在 | 现存例子 |
+|---|---|---|
+| `-db` | 结构化数据 + 生成视图的索引层 | `repos-db` `stars-db` `repos-db-private` |
+| `-guide` / `-foundations` | 教学与学习主线 | `cpp-high-performance-guide` `cuda-foundations` |
+| `-plan` / `-prep` / `-kit` | 计划、求职资料、工具集 | `ai-infra-serving-study-plan` `career-prep` `agent-skills-kit` |
+| `-lab` | 实验体系 | `ascend-llm-infra-lab` |
+| `-site` | 站点仓库 | `imshane-site` |
+| `-server` | 与同名项目配套的服务端 | `cloud-bench-server` |
+| `-minigame` | 微信小游戏（区别于小程序） | `melon-bump-minigame` |
+| `-rust` / `-zh_CN` 等 | 同一工具的第二实现 / 本地化变体 | `fq-compressor-rust` `minibwa-rust` |
+
+- 竞赛仓库：`<赛事>-<年份>-<赛道>-<序号>-<题目slug>`，例 `cann-2026-power-04-det`。
+- Fork 沿用上游名，不改（`vllm`、`Triton-Puzzles`、`Termius-Pro-zh_CN`）。
+- 反面清单：不要把语言写进名字（`xxx-cpp`）；不要造无信息量的泛名（`my-project`、`tools`）；不要在一个功能域里混三种命名风格。
 - 已存在的历史命名不为了整齐而批量重命名；只在下次自然触碰该仓库时按本规则改。
 
 ### 为什么 `repos-db` / `stars-db` 不改名
